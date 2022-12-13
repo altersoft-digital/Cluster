@@ -1,0 +1,102 @@
+.overview {
+  padding: 5.2rem 0;
+  padding-left: 4.2rem;
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  .heading-primary--main {
+    color: $color-white;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -4.2rem;
+      top: 0;
+      width: 10px;
+      height: 4.4rem;
+      background-color: $color-secondary-light;
+    }
+  }
+
+  &__details {
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+
+  &__attenders,
+  &__registers,
+  &__language {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__attenders {
+    & svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      & path {
+        fill: $color-white;
+      }
+    }
+  }
+
+  &__registers--green {
+    color: $color-secondary-light;
+    & svg {
+      width: 1.8rem;
+      height: 1.8rem;
+      & path {
+        fill: $color-secondary-light;
+      }
+    }
+  }
+
+  &__language {
+    gap: 8px;
+  }
+
+  &__text {
+    line-height: 2.6rem;
+    color: $color-grey--light;
+    max-width: 63.8rem;
+  }
+
+  &__foot {
+    margin-top: 1.8rem;
+  }
+
+  &__start-date {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    width: auto;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
+    color: $color-white;
+    span {
+      color: $color-tertiary-dark;
+      line-height: 1.5rem;
+      letter-spacing: -0.02em;
+      font-weight: 700;
+    }
+  }
+
+  &__pay {
+    margin-top: 5.2rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $color-grey--light;
+  }
+}

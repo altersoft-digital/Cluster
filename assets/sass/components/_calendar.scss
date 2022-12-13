@@ -1,0 +1,99 @@
+.calendar {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.3rem;
+    border-bottom: 1px solid $color-primary-light-3;
+
+    .left {
+      transform: rotate(90deg);
+    }
+    .right {
+      transform: rotate(270deg);
+    }
+
+    &--arrow-box {
+      cursor: pointer;
+      height: 100%;
+      @include flexCenter;
+      & svg {
+        transition: all 0.4s;
+
+        & path {
+          transition: all 0.4s;
+        }
+      }
+      &:hover {
+        &.small .left {
+          transform: rotate(90deg) translateY(4px);
+        }
+
+        &.small .right {
+          transform: rotate(270deg) translateY(4px);
+        }
+
+        &.small svg path {
+          fill: rgba(6, 22, 47, 0.6);
+        }
+      }
+    }
+  }
+
+  &__date {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  &__weeks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px;
+  }
+
+  &__week {
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 11px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__days {
+    margin-top: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(38.99px, 1fr));
+    column-gap: 1.7rem;
+    row-gap: 7px;
+  }
+
+  &__day {
+    width: 38.99px;
+    height: 38.99px;
+    @include flexCenter;
+    font-weight: 500;
+
+    &.active {
+      background: #1294f2;
+      border-radius: 92.8401px;
+      color: $color-white;
+    }
+
+    &.during {
+      background: #ecf2ff;
+      border-radius: 92.8401px;
+      color: #2f80ed;
+    }
+
+    &.inactive {
+      color: rgba(6, 22, 47, 0.4);
+    }
+  }
+}

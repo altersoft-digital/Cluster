@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap");
+.events {
+  &__calendar {
+    width: 100%;
+    border: 1px solid rgba(6, 22, 47, 0.2);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.18);
+    border-radius: 4.56376px;
+    padding: 2.2rem;
+    font-weight: 600;
+    font-family: $font-tertiary;
+    &--head {
+      width: 100%;
+      height: 4.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      button {
+        @include flexCenter;
+        border: none;
+        cursor: pointer;
+
+        &.arrow-box {
+          width: 45.64px;
+          height: 100%;
+          background: #93c5fd;
+          border-radius: 4.56376px;
+
+          &.active {
+            background: #3b82f6;
+          }
+
+          &#prev svg#prev {
+            transform: rotate(180deg);
+          }
+
+          &:hover svg#prev {
+            transform: rotate(180deg) translateX(2px);
+          }
+
+          &:hover svg#next {
+            transform: scale(1.01) translateX(2px);
+          }
+        }
+      }
+    }
+
+    &--arrows {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    &--span {
+      padding: 5.7047px 17.1141px;
+      background: #eff6ff;
+      border-radius: 4.56376px;
+      color: #2563eb;
+    }
+
+    &--date {
+      font-size: 2rem;
+      line-height: 2.8rem;
+      color: #475569;
+    }
+
+    &--options {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      .three-dots {
+        padding: 3px 1rem;
+        @include flexCenter;
+        cursor: pointer;
+        transition: all 0.3s;
+        & svg {
+          transition: all 0.3s;
+          & path {
+            transition: all 0.3s;
+          }
+        }
+        &:hover {
+          & svg path {
+            fill: rgba(0, 0, 0, 0.6);
+          }
+          transform: scale(1.15);
+        }
+      }
+    }
+
+    &--btn {
+      font-family: $font-primary;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 2rem;
+      background: none;
+      border: none;
+      color: #3b82f6;
+      transition: all 0.4s;
+      &:hover {
+        color: rgba(59, 131, 246, 0.6);
+      }
+      &.active {
+        color: #2563eb;
+        padding: 5.7047px 17.1141px;
+        background-color: #eff6ff;
+      }
+    }
+
+    &--days,
+    &--numbers {
+      list-style-type: none;
+    }
+
+    &--days {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 9px;
+    }
+
+    &--day {
+      text-align: center;
+      padding: 13.6913px 0px;
+      background: #eff6ff;
+      border-radius: 4.56376px;
+    }
+
+    &--day,
+    &--number {
+      font-weight: 600;
+      font-size: 22.8188px;
+      line-height: 32px;
+      color: #475569;
+    }
+
+    &--numbers {
+      margin-top: 9px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(179.94px, 1fr));
+      gap: 9px;
+    }
+
+    &--number {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 22.8188px;
+      height: 18.925rem;
+      background-color: #fff;
+      border: 0.57047px solid #94a3b8;
+      border-radius: 4.56376px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #eff6ff;
+      }
+
+      &.inactive {
+        border: none;
+        color: #94a3b8;
+        background-color: #f8fafc;
+      }
+
+      &.active {
+        background-color: #fdf2f8;
+      }
+    }
+
+    &--labels {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    &--label {
+      border-width: 0.57047px;
+      border-style: dashed;
+      border-radius: 28.5235px;
+      font-weight: 400;
+      font-size: 15.9732px;
+      line-height: 2.3rem;
+      text-align: center;
+      @include flexCenter;
+      gap: 8px;
+
+      &.label-red {
+        background: #fee2e2;
+        border-color: #dc2626;
+        color: #dc2626;
+        & svg path {
+          fill: #dc2626;
+        }
+      }
+
+      &.label-green {
+        background: #dcfce7;
+        border-color: #16a34a;
+        color: #16a34a;
+        & svg path {
+          fill: #16a34a;
+        }
+      }
+
+      &.label-yellow {
+        background: #fef9c3;
+        border-color: #ca8a04;
+        color: #ca8a04;
+        & svg path {
+          fill: #ca8a04;
+        }
+      }
+
+      &.label-blue {
+        background: #dbeafe;
+        border-color: #2563eb;
+        color: #2563eb;
+        & svg path {
+          fill: #2563eb;
+        }
+      }
+
+      &.label-neutral {
+        background: #f3f4f6;
+        border-color: #475569;
+        color: #475569;
+        & svg path {
+          fill: #475569;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+.section-quote {
+  padding: 5.8rem 0 6.8rem 0;
+}
+
+.section-cannot-find {
+  background: $color-tertiary-light;
+  border-radius: 3.2rem;
+  margin: 8rem auto;
+  padding: 5.2rem 0;
+
+  @include flexCenter;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  .cannot-find__text-box {
+    @include flexCenter;
+    flex-direction: column;
+  }
+
+  .heading-secondary {
+    max-width: 37.8rem;
+    margin: auto;
+  }
+
+  .cannot-find__p {
+    line-height: 2.6rem;
+    color: $color-primary-light-1;
+  }
+
+  .btn {
+    background-color: $color-primary;
+    border-radius: 8px;
+  }
+}

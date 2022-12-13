@@ -1,0 +1,137 @@
+.course {
+  position: relative;
+  width: 100%;
+  max-width: 32.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+
+  &__after {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -4px;
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      padding: 8px 12px;
+      letter-spacing: -0.02em;
+      border-radius: 4px;
+
+      color: #ffffff;
+    }
+
+    &.bestseller::after {
+      content: "Best Seller";
+      background: $color-orange;
+    }
+
+    &.new::after {
+      content: "new";
+      background: $color-secondary-light;
+      text-transform: uppercase;
+    }
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--news {
+      grid-column: 1/ -1;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    // border-radius: 16px;
+    transition: all 0.3s ease;
+  }
+
+  &__img-box {
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(6, 22, 47, 0.1);
+    border-radius: 16px;
+    height: 22rem;
+    svg {
+      transition: all 0.3s ease;
+    }
+    &--orange svg {
+      & path {
+        fill: $color-orange;
+      }
+    }
+    &--red svg {
+      transform: rotate(50deg);
+      & path {
+        fill: $color-red;
+      }
+    }
+    &--green svg {
+      transform: rotate(244deg);
+
+      & path {
+        fill: $color-secondary-light;
+      }
+    }
+    &--blue svg {
+      transform: rotate(303deg);
+
+      & path {
+        fill: $color-tertiary-dark;
+      }
+    }
+  }
+
+  &__sub-heading {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.4rem;
+
+    .course__middle-dot {
+      font-size: 2rem;
+      position: relative;
+      bottom: 1.5px;
+    }
+    line-height: 2rem;
+    letter-spacing: -0.02em;
+    color: $color-primary-light-1;
+  }
+
+  &__remote {
+    color: $color-secondary-light;
+  }
+
+  &__price {
+    font-weight: 500;
+  }
+  h3.heading-tertiary {
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    .course__img {
+      transform: scale(1.1);
+    }
+
+    svg {
+      transform: scale(1.1);
+    }
+
+    h3.heading-tertiary {
+      color: $color-primary-light-1;
+    }
+  }
+}

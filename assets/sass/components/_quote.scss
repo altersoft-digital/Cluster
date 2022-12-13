@@ -1,0 +1,30 @@
+.quote {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 71.4rem;
+  justify-content: space-between;
+  gap: 2rem;
+  &__img {
+    width: 100%;
+    max-width: 22.5rem;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  &__text {
+    max-width: 43.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__autor {
+    align-self: flex-end;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+
+    color: $color-primary-light-1;
+  }
+}

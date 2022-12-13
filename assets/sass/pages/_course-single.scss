@@ -1,0 +1,94 @@
+.main-course {
+  margin-top: 3.2rem;
+  position: relative;
+  .container {
+    display: grid;
+    grid-template-columns: 3.11fr 1.56fr;
+    gap: 5.2rem;
+  }
+}
+
+.course-head-back {
+  background-image: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 43.2rem;
+  z-index: -1;
+  &::before {
+    content: "";
+    background-image: url(../imgs/frame.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    max-width: 59.8rem;
+  }
+}
+
+.course {
+  &__companies {
+    margin: 3.2rem 0 4rem 0;
+    padding: 2.4rem 0 3.2rem 3.2rem;
+    background: $color-tertiary-light;
+    border-radius: 12px;
+  }
+
+  &__guide {
+    margin-bottom: 4rem;
+  }
+
+  &__description {
+    margin-bottom: 4rem;
+  }
+
+  &__feedback {
+    margin-bottom: 4rem;
+    .heading-h4 span {
+      font-weight: 500;
+      color: rgba(6, 22, 47, 0.5);
+      margin-left: 6px;
+    }
+  }
+
+  &__courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+    column-gap: 2.4rem;
+    row-gap: 3.2rem;
+    justify-items: center;
+
+    .course {
+      max-width: 42rem;
+    }
+  }
+}
+
+.companies {
+  &__text {
+    max-width: 41.8rem;
+    line-height: 2.4rem;
+    color: $color-primary-light-1;
+  }
+
+  &__box {
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+}
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  .review {
+    max-width: 100%;
+    padding-bottom: 3.2rem;
+  }
+}

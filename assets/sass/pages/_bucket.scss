@@ -1,0 +1,87 @@
+.bucket {
+  margin-top: 7rem;
+
+  &__left {
+    width: 100%;
+  }
+
+  &__products {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .checkout__product {
+      flex: 2;
+    }
+
+    .btn__white {
+      & svg {
+        transition: all 0.4s;
+      }
+      &:hover,
+      &:active {
+        box-shadow: none;
+        transform: scale(0.99);
+
+        & svg {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  .course__img-box {
+    flex: 0 1 20.7rem;
+    height: 16.2rem;
+
+    & svg {
+      width: 7.1rem;
+      height: 7.1rem;
+    }
+  }
+
+  &__product-name {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-primary-light-1;
+    }
+  }
+
+  &__line {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid $color-primary-light-3;
+  }
+
+  .btn__blue {
+    margin-top: 1.6rem;
+    align-self: flex-end;
+  }
+
+  &__right {
+    border: 1px solid $color-primary-light-3;
+    border-radius: 12px;
+    padding: 3.2rem;
+
+    .btn__black {
+      width: 100%;
+    }
+  }
+
+  &__subtotal {
+    font-weight: 500;
+  }
+}

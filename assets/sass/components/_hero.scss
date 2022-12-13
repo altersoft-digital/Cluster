@@ -1,0 +1,102 @@
+.hero {
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 5.2rem;
+    width: 100%;
+    height: auto;
+    max-width: 64.9rem;
+    max-height: 59.3rem;
+  }
+
+  &__puzzle {
+    position: absolute;
+    right: 28.4rem;
+    bottom: 17rem;
+
+    &:nth-of-type(2) {
+      right: 3rem;
+      bottom: 3.7rem;
+      transform: rotate(116deg);
+    }
+    &:nth-of-type(3) {
+      right: 35.4rem;
+      bottom: 4px;
+      transform: rotate(217deg);
+    }
+    &:nth-of-type(4) {
+      right: 60rem;
+      bottom: 9.9rem;
+      transform: rotate(302deg);
+    }
+  }
+  &__right {
+    align-self: center;
+    padding-top: 5%;
+    padding-left: 5.2rem;
+    .heading-primary--main {
+      max-width: 412px;
+      // mix-blend-mode: color-burn;
+      // &[data-overlay] {
+      //   mix-blend-mode: color-burn;
+      //   position: absolute;
+      //   left: 0;
+      //   top: 0;
+      //   color: #111;
+      //   z-index: -2;
+      //   opacity: 0.3;
+      // }
+    }
+    h4 {
+      font-weight: 500;
+      color: $color-primary-light-1;
+    }
+  }
+
+  &__title-cont {
+    position: relative;
+  }
+
+  &__name {
+    position: absolute;
+    bottom: 3.3rem;
+    right: 0;
+    padding: 2.4rem 16rem 2.4rem 4rem;
+    background: $color-primary-light-1;
+    backdrop-filter: blur(7px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 24px 0px 0px 24px;
+  }
+
+  &__back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 35.2rem;
+    width: 100%;
+    background-color: $color-tertiary-light;
+    // background-size: cover;
+    // background-position: top;
+    // clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0 100%);
+    border-radius: 2.4rem;
+    overflow: hidden;
+
+    // &::before {
+    //   content: "“";
+    //   font-family: "Noto Sans JP", sans-serif;
+    //   font-size: 35rem;
+    //   font-weight: 900;
+    //   color: rgba(33, 118, 255, 0.3);
+    //   position: absolute;
+    //   top: 19%;
+    //   left: -2%;
+    //   opacity: 0.5;
+    //   z-index: 0;
+    //   transform: rotate(2deg);
+    // }
+  }
+}
+.btn-courses {
+  text-transform: uppercase;
+}

@@ -1,0 +1,206 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-color: $color-primary-light-3;
+  z-index: 4000;
+  opacity: 0;
+  visibility: hidden;
+  // &#popup {
+  // opacity: 1;
+  // visibility: visible;
+  // }
+  // &#popup2 {
+  // opacity: 1;
+  // visibility: visible;
+  // }
+  // &#popup3 {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+  // &#popup4 {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+  // &#popup5 {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+  // &#popup6 {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+
+  transition: all 0.3s;
+
+  &__content {
+    @include absCenter;
+    background-color: $color-white;
+    border-radius: 2.4rem;
+    z-index: 5000;
+    overflow: hidden;
+    // opacity: 0;
+    // transform: translate(-50%, -50%) scale(0.2);
+    transition: all 0.4s 0.2s;
+    width: 100%;
+    max-width: 76.8rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &--message {
+      grid-template-columns: 1fr;
+      padding: 3.2rem;
+      padding-top: 7rem;
+      justify-items: center;
+    }
+  }
+
+  &__message--p {
+    font-weight: 500;
+    color: $color-primary-light-1;
+  }
+
+  &__left {
+    background-image: url(../imgs/pop-up-img-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__right {
+    padding: 0 3.2rem;
+    padding-top: 6.2rem;
+
+    &--with-email {
+      height: 100%;
+      padding: 6.2rem 3.2rem 3.2rem 3.2rem;
+    }
+  }
+
+  &__title-p {
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $color-primary-light-1;
+  }
+
+  &__back-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    left: calc(50% + 3.2rem);
+    transition: all 0.3s;
+    transform: rotate(90deg);
+    &:hover {
+      transform: rotate(90deg) translateY(4px);
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 22px;
+    right: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__right-content {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    &--accounts {
+      gap: 12px;
+    }
+
+    &--sign-in {
+      height: 100%;
+      gap: 14.2rem;
+      &.sign-up {
+        gap: 3.2rem;
+      }
+      &.recover {
+        gap: 21.6rem;
+      }
+      input {
+        width: 100%;
+        padding: 1.6rem;
+        border: 1px solid $color-primary-light-3;
+        border-radius: 6px;
+        font-family: $font-primary;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        &::placeholder {
+          color: rgba(6, 22, 47, 0.5);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .sub-heading {
+        font-weight: 400;
+      }
+
+      .btn-forgot-password {
+        display: inline-block;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $color-tertiary-dark;
+        text-decoration: none;
+        border-bottom: 1px solid $color-tertiary-dark;
+        transition: all 0.3s;
+        &:hover {
+          color: rgba(33, 118, 255, 0.7);
+          border-color: rgba(33, 118, 255, 0.7);
+        }
+      }
+    }
+    &--form-down {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.recover {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__account {
+    cursor: pointer;
+    padding: 1.6rem 0;
+    padding-left: 2rem;
+    width: 100%;
+    max-width: 32.4rem;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    background: $color-white;
+    border: 1px solid $color-primary-light-3;
+    border-radius: 6px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: rgba(6, 22, 47, 0.02);
+    }
+  }
+
+  &__account p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+
+    color: $color-primary;
+  }
+}

@@ -1,0 +1,141 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    font-family: inherit;
+    background-color: $color-tertiary-dark;
+    text-decoration: none;
+    padding: 2rem 3.2rem;
+    display: inline-block;
+    border-radius: 1.6rem;
+    transition: all 0.2s;
+    position: relative;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: $color-white;
+  }
+  & {
+    //Change for the <button> element
+    border: none;
+    // background: none;
+    cursor: pointer;
+  }
+  &__green {
+    &.btn,
+    &:link,
+    &:visited {
+      background: $color-secondary-light;
+      @include flexCenter;
+      gap: 1.6rem;
+    }
+
+    & svg path {
+      fill: $color-white;
+    }
+  }
+
+  &__black {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+    & svg path {
+      fill: $color-white;
+    }
+  }
+
+  &__white {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-white;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+  }
+
+  &__yellow {
+    &,
+    &:link,
+    &:visited {
+      background-color: #fbbc05;
+      border-radius: 8px;
+    }
+  }
+
+  &__see-all {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__message,
+  &__call {
+    &,
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+  }
+
+  &__call {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-primary;
+    }
+  }
+
+  &__message {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-secondary-light;
+    }
+  }
+
+  &--radius-8px {
+    &,
+    &:link,
+    &:visited {
+      border-radius: 8px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    /*          X  Y   blur        color*/
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    // &::after {
+    //   transform: scaleX(1.4) scaleY(1.6);
+    //   opacity: 0;
+    // }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}

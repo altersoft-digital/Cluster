@@ -1,0 +1,96 @@
+.privacy {
+  margin-top: 7rem;
+  &__container {
+    max-width: 113rem;
+    margin: 0 auto;
+  }
+
+  &__ul {
+    list-style-type: none;
+
+    width: 100%;
+    @include flexCenter;
+    gap: 3.2rem;
+    border-bottom: 2px solid $color-primary-light-3;
+  }
+
+  &__li {
+    position: relative;
+    bottom: -1px;
+    padding-bottom: 2.4rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in;
+    &--line {
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0%;
+      height: 2px;
+      background-color: $color-tertiary-dark;
+      transition: width 0.4s;
+    }
+    &:nth-of-type(1) {
+      .privacy__li--line {
+        left: unset;
+        right: 0;
+      }
+    }
+    &.li-active {
+      .privacy__li--line {
+        width: 100%;
+      }
+      // border-bottom: 1px solid $color-tertiary-dark;
+      & button {
+        color: $color-tertiary-dark;
+        // background-image: linear-gradient(
+        //   to right,
+        //   $color-tertiary-dark,
+        //   $color-tertiary-dark
+        // );
+      }
+    }
+  }
+
+  &__link {
+    font-family: inherit;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    // background-clip: text;
+    // background-image: linear-gradient(to right, $color-primary, $color-primary);
+    // -webkit-background-clip: text;
+    transition: all 0.4s ease;
+
+    // &.active-to-right {
+    //   @include colorMove($color-primary, $color-tertiary-dark, right);
+    //   animation: colorMoveTo 5s linear;
+    // }
+    // &.inacitve-to-right {
+    //   @include colorMove($color-tertiary-dark, $color-primary, right);
+    //   animation: colorMoveTo 5s linear;
+    // }
+    // &.active-to-left {
+    //   @include colorMove($color-primary, $color-tertiary-dark, left);
+    //   animation: colorMoveTo 0.5s linear;
+    // }
+    // &.inacitve-to-left {
+    //   @include colorMove($color-tertiary-dark, $color-primary, left);
+    //   animation: colorMoveTo 0.5s linear;
+    // }
+  }
+
+  &__text {
+    display: flex;
+    gap: 3.2rem;
+    .heading-secondary {
+      font-family: "Euclid Circular B";
+      line-height: 3.8rem;
+    }
+    &--p {
+      line-height: 2.8rem;
+    }
+  }
+}

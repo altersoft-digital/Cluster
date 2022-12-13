@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  // outline: 1px solid $color-primary;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px; 10px/16px = 62.5%
+
+  // @include respond-phone {
+  //   font-size: 50%;
+  // }
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9 px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8 px, 8/16 = 50%
+  }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 1rem = 12px, 12/16 = 75%
+  // }
+}
+
+// .container {
+// display: grid;
+// grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+// grid-template-columns: [full-start] minmax(28rem, 1fr) [center-start] repeat(
+//     10,
+//     [col-start] minmax(min-content, 13.6rem) [col-end]
+//   ) [center-end] minmax(28rem, 1fr) [full-end];
+// }
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}

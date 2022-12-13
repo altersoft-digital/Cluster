@@ -1,0 +1,144 @@
+.registered {
+  margin-top: 7rem;
+
+  &__product {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    .course__img-box {
+      width: 100%;
+      max-width: 16rem;
+      height: 12.5rem;
+    }
+
+    & svg {
+      height: 5.4rem;
+      width: 5.4rem;
+    }
+  }
+  .heading-tertiary {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 3rem;
+  }
+
+  &__questionarie {
+    margin-top: 4rem;
+    &--p {
+      color: $color-primary-light-1;
+    }
+
+    &--take {
+      width: 100%;
+      padding: 3.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.4rem;
+      border: 1px solid $color-primary-light-3;
+      border-radius: 12px;
+    }
+  }
+
+  &__shared {
+    &--contents {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    &--content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px;
+      padding-left: 3.2rem;
+      width: 100%;
+      border: 1px solid $color-primary-light-3;
+      border-radius: 12px;
+    }
+
+    &--left,
+    &--right {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    &--left {
+      gap: 2.4rem;
+    }
+
+    &--size,
+    &--h4 {
+      font-weight: 500;
+    }
+
+    &--size {
+      color: $color-primary-light-1;
+    }
+
+    .btn__download {
+      box-shadow: none;
+      img {
+        transition: all 0.4s;
+      }
+      &:hover {
+        transform: translate(0, 0);
+      }
+      &:hover img {
+        transform: translateY(3px);
+      }
+    }
+  }
+
+  &__right {
+    padding: 3.2rem;
+    border: 1px solid $color-primary-light-3;
+    border-radius: 12px;
+    align-self: start;
+  }
+
+  &__users {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid $color-primary-light-3;
+
+    &--name {
+      font-weight: 500;
+    }
+  }
+
+  &__share {
+    &--p {
+      margin: 1.6rem 0;
+      color: $color-primary-light-1;
+    }
+
+    &--socials {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      & img {
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}

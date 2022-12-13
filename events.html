@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="digital, product, agency, design, uiux, frontend, backend, website, create, project"
+    />
+    <meta name="author" content="Ascended" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.cdnfonts.com/css/euclid-circular-b"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="icon"
+      type="image/svg"
+      sizes="16x16"
+      href="./assets/imgs/cluster-logo-small.svg"
+    />
+    <title>Cluster - Courses</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <a href="index.html" class="header__logo-box">
+          <!-- <img
+            src="assets/imgs/cluster-logo-small.svg"
+            alt="Cluster logo"
+            class="header__logo"
+          /> -->
+          <svg
+            class="logo-orange"
+            width="21"
+            height="22"
+            viewBox="0 0 21 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.6658 7.57613L16.321 7.93644L15.3602 4.35063C15.0948 3.36003 14.0775 2.7727 13.0869 3.03811L9.501 3.99894L9.1407 2.65426C8.80927 1.41714 7.53616 0.682165 6.29903 1.0136C5.06191 1.3451 4.32693 2.61814 4.65837 3.85526L5.01867 5.19994L1.43286 6.16078C0.442261 6.42625 -0.136103 7.44114 0.129371 8.43174L1.03766 11.8395L2.37782 11.4804C3.71354 11.1225 5.08894 11.9166 5.44685 13.2523C5.80476 14.5881 5.01067 15.9634 3.67495 16.3213L2.33472 16.6804L3.24301 20.0882C3.50848 21.0788 4.52577 21.6661 5.51637 21.4007L8.92298 20.4879L8.56268 19.1432C8.2047 17.8074 8.99879 16.4321 10.3345 16.0742C11.6703 15.7163 13.0456 16.5104 13.4035 17.8461L13.7638 19.1907L17.1704 18.278C18.161 18.0125 18.7483 16.9952 18.4829 16.0046L17.5221 12.4188L18.8668 12.0585C20.1039 11.727 20.8389 10.4539 20.5074 9.2168C20.1759 7.97975 18.9029 7.2447 17.6658 7.57613Z"
+              fill="#FD9A05"
+            />
+          </svg>
+          <svg
+            class="logo-red"
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.2198 15.3473L18.2354 14.363L20.8605 11.738C21.5856 11.0128 21.5857 9.83808 20.8605 9.11295L18.2354 6.48791L19.2198 5.50354C20.1254 4.59792 20.1254 3.12789 19.2198 2.22227C18.3142 1.31661 16.8442 1.31661 15.9385 2.22227L14.9542 3.20664L12.3291 0.581609C11.604 -0.143538 10.4359 -0.13699 9.71066 0.588191L7.21363 3.0787L8.19472 4.05979C9.17252 5.03759 9.17252 6.62571 8.19472 7.60359C7.21685 8.58139 5.62872 8.58139 4.65092 7.60359L3.66983 6.6225L1.1728 9.11295C0.447608 9.83808 0.447608 11.0128 1.1728 11.738L3.66655 14.2317L4.65092 13.2474C5.62879 12.2696 7.21691 12.2696 8.19472 13.2474C9.17259 14.2252 9.17259 15.8133 8.19472 16.7912L7.21034 17.7755L9.70409 20.2693C10.4293 20.9944 11.6039 20.9945 12.3291 20.2693L14.9542 17.6443L15.9385 18.6287C16.8442 19.5343 18.3142 19.5343 19.2198 18.6287C20.1254 17.723 20.1254 16.253 19.2198 15.3473Z"
+              fill="#CF2E0A"
+            />
+          </svg>
+          <svg
+            class="logo-blue"
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.53985 14.1633L4.88453 13.803L5.84537 17.3888C6.11077 18.3794 7.12813 18.9668 8.11873 18.7014L11.7045 17.7405L12.0649 19.0852C12.3963 20.3223 13.6695 21.0573 14.9066 20.7259C16.1437 20.3944 16.8787 19.1213 16.5472 17.8842L16.1869 16.5395L19.7727 15.5787C20.7633 15.3133 21.3417 14.2983 21.0762 13.3077L20.1679 9.89994L18.8278 10.2591C17.492 10.617 16.1167 9.8229 15.7588 8.48718C15.4008 7.1514 16.1949 5.77607 17.5307 5.41816L18.8708 5.05909L17.9626 1.65131C17.6971 0.660707 16.6798 0.0733805 15.6892 0.338786L12.2826 1.25159L12.6429 2.59627C13.0008 3.93205 12.2068 5.30739 10.871 5.6653C9.53532 6.02321 8.15998 5.22911 7.80207 3.89339L7.44177 2.54872L4.03522 3.46145C3.04462 3.72693 2.4573 4.74421 2.7227 5.73481L3.68354 9.32069L2.33886 9.681C1.10174 10.0125 0.36669 11.2855 0.69819 12.5227C1.02969 13.7598 2.30273 14.4948 3.53985 14.1633Z"
+              fill="#2176FF"
+            />
+          </svg>
+          <svg
+            class="logo-green"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.80319 3.30081L7.16356 4.64556L3.57768 5.60633C2.58715 5.87181 1.99975 6.88909 2.26516 7.87969L3.22599 11.4656L1.88132 11.8259C0.644195 12.1574 -0.0907843 13.4304 0.240647 14.6675C0.572147 15.9047 1.84519 16.6396 3.08231 16.3082L4.42706 15.9479L5.38783 19.5337C5.6533 20.5243 6.66819 21.1027 7.65879 20.8373L11.0666 19.929L10.7075 18.5887C10.3496 17.253 11.1436 15.8776 12.4793 15.5197C13.8151 15.1618 15.1904 15.9559 15.5484 17.2916L15.9075 18.6318L19.3152 17.7236C20.3058 17.4581 20.8931 16.4408 20.6277 15.4502L19.7149 12.0437L18.3702 12.404C17.0345 12.7619 15.6591 11.9678 15.3012 10.6321C14.9433 9.29628 15.7374 7.92095 17.0731 7.56304L18.4178 7.20273L17.5051 3.79618C17.2396 2.80565 16.2223 2.21826 15.2317 2.48366L11.6458 3.4445L11.2855 2.09982C10.9541 0.8627 9.68097 0.127722 8.44392 0.459153C7.2068 0.790653 6.47175 2.06369 6.80319 3.30081Z"
+              fill="#14DC94"
+            />
+          </svg>
+        </a>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="courses.html" class="header__link">Courses</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Events</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Blog</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">About us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__right">
+        <form class="header__language-changer">
+          <label for="language-changer" class="header__label"
+            ><img src="assets/imgs/Eng.png" alt="Eng Language"
+          /></label>
+          <select name="language" id="language-changer" class="header__select">
+            <option value="Eng">Eng</option>
+            <option value="Geo">Geo</option>
+          </select>
+        </form>
+        <ul class="header__user-list">
+          <li class="header__user-item">
+            <a href="#" class="header__user-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.869 5.77295L12.0003 6.01006L12.1315 5.77295C12.5616 4.9958 13.1892 4.34591 13.9509 3.88892C14.7113 3.43268 15.5784 3.18482 16.465 3.17026C17.8816 3.23297 19.2161 3.8532 20.1774 4.89581C21.1396 5.93951 21.6497 7.32163 21.5962 8.74023L21.5961 8.74022V8.74588C21.5961 10.0826 21.0549 11.4839 20.2219 12.8461C19.3899 14.2068 18.2742 15.5165 17.1429 16.6671C14.8802 18.9683 12.5694 20.6186 12.383 20.7505L12.0003 21.0214L11.6179 20.7508C11.4311 20.6177 9.1203 18.9675 6.85765 16.6665C5.72628 15.516 4.61062 14.2064 3.77861 12.8459C2.94564 11.4838 2.40442 10.0826 2.40442 8.74588H2.40453L2.40431 8.74023C2.35078 7.32163 2.86088 5.93951 3.82315 4.89581C4.78442 3.8532 6.11888 3.23297 7.5355 3.17026C8.4221 3.18482 9.28924 3.43268 10.0496 3.88892C10.8113 4.34591 11.4389 4.9958 11.869 5.77295ZM11.9105 19.3258L12.0003 19.3928L12.09 19.3258C13.4165 18.3349 15.4551 16.623 17.1639 14.7C18.0183 13.7385 18.7933 12.7207 19.3554 11.711C19.9158 10.7042 20.2708 9.69435 20.2718 8.74992C20.3283 7.68418 19.9617 6.63917 19.2516 5.84229C18.5406 5.04441 17.543 4.56003 16.4763 4.49479L16.4671 4.49423L16.4579 4.49479C15.3912 4.56003 14.3936 5.04441 13.6826 5.84229C13.0068 6.60073 12.6421 7.58395 12.6572 8.59588H11.3433C11.3584 7.58395 10.9937 6.60073 10.3179 5.84229C9.60692 5.04441 8.60928 4.56003 7.54257 4.49479L7.53341 4.49423L7.52426 4.49479C6.45755 4.56003 5.45991 5.04441 4.74892 5.84229C4.03884 6.63917 3.67222 7.68419 3.72873 8.74993C3.72974 9.69396 4.0847 10.7036 4.64513 11.7103C5.20723 12.72 5.98223 13.7378 6.83663 14.6994C8.54537 16.6226 10.584 18.3349 11.9105 19.3258Z"
+                  fill="#06162F"
+                  stroke="white"
+                  stroke-width="0.3"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="header__user-item">
+            <a href="#" class="header__user-link notific">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.85 7V7.15H17H21.85V19.5C21.85 20.1233 21.6024 20.721 21.1617 21.1617C20.721 21.6024 20.1233 21.85 19.5 21.85H4.5C3.87674 21.85 3.27901 21.6024 2.8383 21.1617C2.39759 20.721 2.15 20.1233 2.15 19.5V7.15H7H7.15V7C7.15 5.7137 7.66098 4.48008 8.57053 3.57053C9.48008 2.66098 10.7137 2.15 12 2.15C13.2863 2.15 14.5199 2.66098 15.4295 3.57053C16.339 4.48008 16.85 5.7137 16.85 7ZM15.3333 7.15H15.4833V7C15.4833 6.07616 15.1163 5.19016 14.4631 4.53691C13.8098 3.88366 12.9238 3.51667 12 3.51667C11.0762 3.51667 10.1902 3.88366 9.53691 4.53691C8.88366 5.19016 8.51667 6.07616 8.51667 7V7.15H8.66667H15.3333ZM3.66667 8.51667H3.51667V8.66667V19.5C3.51667 19.7608 3.62027 20.0109 3.80468 20.1953C3.98909 20.3797 4.2392 20.4833 4.5 20.4833H19.5C19.7608 20.4833 20.0109 20.3797 20.1953 20.1953C20.3797 20.0109 20.4833 19.7608 20.4833 19.5V8.66667V8.51667H20.3333H17H16.85V8.66667V10.1833H15.4833V8.66667V8.51667H15.3333H8.66667H8.51667V8.66667V10.1833H7.15V8.66667V8.51667H7H3.66667Z"
+                  fill="#06162F"
+                  stroke="white"
+                  stroke-width="0.3"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="header__user-item">
+            <a href="#" class="header__user-link">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.85 8C8.85 9.7397 10.2603 11.15 12 11.15C13.7397 11.15 15.15 9.7397 15.15 8C15.15 6.2603 13.7397 4.85 12 4.85C10.2603 4.85 8.85 6.2603 8.85 8ZM7.15 8C7.15 5.32142 9.32142 3.15 12 3.15C14.6786 3.15 16.85 5.32142 16.85 8C16.85 10.6786 14.6786 12.85 12 12.85C9.32142 12.85 7.15 10.6786 7.15 8ZM4.15143 21.85C4.19014 19.8223 5.01244 17.886 6.44921 16.4492C7.92137 14.9771 9.91805 14.15 12 14.15C14.0819 14.15 16.0786 14.9771 17.5508 16.4492C18.9876 17.886 19.8099 19.8223 19.8486 21.85H18.1482C18.1097 20.2733 17.4667 18.7692 16.3487 17.6513C15.1954 16.4979 13.6311 15.85 12 15.85C10.3689 15.85 8.80464 16.4979 7.65129 17.6513C6.53335 18.7692 5.89025 20.2733 5.85183 21.85H4.15143Z"
+                  fill="#06162F"
+                  stroke="white"
+                  stroke-width="0.3"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main class="container u-margin-top-huge">
+      <div class="road road--black u-margin-bottom-small">
+        <a href="#" class="road__link">Home</a>
+        <svg
+          width="18"
+          height="10"
+          viewBox="0 0 18 10"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M9 9.95078L17.0133 1.93745L15.1293 0.0507812L9 6.18411L2.872 0.0507812L0.986664 1.93611L9 9.95078Z"
+            fill="#06162F"
+          />
+        </svg>
+        <p class="road__link--p">Events</p>
+      </div>
+      <div class="events">
+        <h1 class="heading-primary--main u-margin-bottom-small">Events</h1>
+        <div class="events__calendar">
+          <div class="events__calendar--head u-margin-bottom-small">
+            <div class="events__calendar--arrows">
+              <button id="prev" class="calendar__head--arrow-box arrow-box">
+                <svg
+                  class="arrow"
+                  id="prev"
+                  width="15"
+                  height="10"
+                  viewBox="0 0 15 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.06568 0.490975L9.16059 0.38349C9.57189 -0.0278005 10.2191 -0.0594383 10.6666 0.288577L10.7741 0.38349L14.1969 3.80631L14.2442 3.85646V3.85646L14.3071 3.93387V3.93387L14.3889 4.06079V4.06079L14.4499 4.1894V4.1894L14.4902 4.30959V4.30959L14.5232 4.47834V4.47834L14.5311 4.61307V4.61307L14.5279 4.69892V4.69892L14.508 4.84209V4.84209L14.4744 4.96921V4.96921L14.4242 5.09595V5.09595L14.3645 5.20717V5.20717L14.2805 5.32667V5.32667L14.1969 5.41984L10.7741 8.84266C10.3286 9.28822 9.60616 9.28822 9.16059 8.84266C8.7493 8.43137 8.71767 7.78419 9.06568 7.33661L9.16059 7.22913L10.6348 5.75401H1.98078C1.35066 5.75401 0.839844 5.2432 0.839844 4.61307C0.839844 3.98295 1.35066 3.47214 1.98078 3.47214H10.6348L9.16059 1.99702C8.7493 1.58573 8.71767 0.938555 9.06568 0.490975L9.16059 0.38349L9.06568 0.490975Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <button
+                id="next"
+                class="calendar__head--arrow-box arrow-box active"
+              >
+                <svg
+                  class="arrow"
+                  id="next"
+                  width="15"
+                  height="10"
+                  viewBox="0 0 15 10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.06568 0.490975L9.16059 0.38349C9.57189 -0.0278005 10.2191 -0.0594383 10.6666 0.288577L10.7741 0.38349L14.1969 3.80631L14.2442 3.85646V3.85646L14.3071 3.93387V3.93387L14.3889 4.06079V4.06079L14.4499 4.1894V4.1894L14.4902 4.30959V4.30959L14.5232 4.47834V4.47834L14.5311 4.61307V4.61307L14.5279 4.69892V4.69892L14.508 4.84209V4.84209L14.4744 4.96921V4.96921L14.4242 5.09595V5.09595L14.3645 5.20717V5.20717L14.2805 5.32667V5.32667L14.1969 5.41984L10.7741 8.84266C10.3286 9.28822 9.60616 9.28822 9.16059 8.84266C8.7493 8.43137 8.71767 7.78419 9.06568 7.33661L9.16059 7.22913L10.6348 5.75401H1.98078C1.35066 5.75401 0.839844 5.2432 0.839844 4.61307C0.839844 3.98295 1.35066 3.47214 1.98078 3.47214H10.6348L9.16059 1.99702C8.7493 1.58573 8.71767 0.938555 9.06568 0.490975L9.16059 0.38349L9.06568 0.490975Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+              <span class="events__calendar--span u-center-text">Today</span>
+            </div>
+            <p class="events__calendar--date event-date">Jul 2022</p>
+            <div class="events__calendar--options">
+              <button class="events__calendar--btn active">Month</button>
+              <button class="events__calendar--btn">Week</button>
+              <button class="events__calendar--btn">Day</button>
+              <button class="events__calendar--btn">List</button>
+              <div class="three-dots">
+                <svg
+                  width="5"
+                  height="19"
+                  viewBox="0 0 5 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.20172 14.6044C3.30444 14.6044 4.19837 15.4984 4.19837 16.6011C4.19837 17.7038 3.30444 18.5977 2.20172 18.5977C1.09901 18.5977 0.205078 17.7038 0.205078 16.6011C0.205078 15.4984 1.09901 14.6044 2.20172 14.6044ZM2.20172 7.61618C3.30444 7.61618 4.19837 8.51011 4.19837 9.61283C4.19837 10.7155 3.30444 11.6095 2.20172 11.6095C1.09901 11.6095 0.205078 10.7155 0.205078 9.61283C0.205078 8.51011 1.09901 7.61618 2.20172 7.61618ZM2.20172 0.62793C3.30444 0.62793 4.19837 1.52186 4.19837 2.62457C4.19837 3.72729 3.30444 4.62122 2.20172 4.62122C1.09901 4.62122 0.205078 3.72729 0.205078 2.62457C0.205078 1.52186 1.09901 0.62793 2.20172 0.62793Z"
+                    fill="#1E293B"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <ul class="events__calendar--days">
+            <li class="events__calendar--day">Sun</li>
+            <li class="events__calendar--day">Mon</li>
+            <li class="events__calendar--day">Tue</li>
+            <li class="events__calendar--day">Wed</li>
+            <li class="events__calendar--day">Thu</li>
+            <li class="events__calendar--day">Fri</li>
+            <li class="events__calendar--day">Sat</li>
+          </ul>
+          <ul class="events__calendar--numbers event-numbers">
+            <li class="events__calendar--number inactive">
+              26
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  Green Label
+                </div>
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">Blue Label</div>
+              </div>
+            </li>
+            <li class="events__calendar--number inactive">27</li>
+            <li class="events__calendar--number inactive">28</li>
+            <li class="events__calendar--number inactive">29</li>
+            <li class="events__calendar--number inactive">30</li>
+            <li class="events__calendar--number">
+              1
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-red">Red Label</div>
+                <div class="events__calendar--label label-neutral">
+                  Neutral Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">2</li>
+            <li class="events__calendar--number">3</li>
+            <li class="events__calendar--number active">
+              4
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">Blue Label</div>
+              </div>
+            </li>
+            <li class="events__calendar--number">5</li>
+            <li class="events__calendar--number">
+              6
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Green Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">
+              7
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Green Label
+                </div>
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">8</li>
+            <li class="events__calendar--number">
+              9
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-red">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Red Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">
+              10
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Blue Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">11</li>
+            <li class="events__calendar--number">12</li>
+            <li class="events__calendar--number">
+              13
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-blue">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Blue Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">14</li>
+            <li class="events__calendar--number">
+              15
+              <div class="events__calendar--labels">
+                <div class="events__calendar--labels">
+                  <div class="events__calendar--label label-green">
+                    <svg
+                      width="12"
+                      height="15"
+                      viewBox="0 0 12 15"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                        fill="#475569"
+                      />
+                    </svg>
+                    Green Label
+                  </div>
+                  <div class="events__calendar--label label-yellow">
+                    Yellow Label
+                  </div>
+                  <div class="events__calendar--label label-blue">
+                    Blue Label
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">16</li>
+            <li class="events__calendar--number">17</li>
+            <li class="events__calendar--number">
+              18
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-blue">Blue Label</div>
+                <div class="events__calendar--label label-neutral">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Neutral Label
+                </div>
+              </div>
+            </li>
+            <li class="events__calendar--number">
+              19
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  Green Label
+                </div>
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">Blue Label</div>
+              </div>
+            </li>
+            <li class="events__calendar--number">20</li>
+            <li class="events__calendar--number">21</li>
+            <li class="events__calendar--number">22</li>
+            <li class="events__calendar--number">23</li>
+            <li class="events__calendar--number">24</li>
+            <li class="events__calendar--number">25</li>
+            <li class="events__calendar--number">26</li>
+            <li class="events__calendar--number">27</li>
+            <li class="events__calendar--number">
+              28
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Green Label
+                </div>
+                <div class="events__calendar--label label-yellow">
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">Blue Label</div>
+              </div>
+            </li>
+            <li class="events__calendar--number">29</li>
+            <li class="events__calendar--number">30</li>
+            <li class="events__calendar--number">31</li>
+            <li class="events__calendar--number inactive">1</li>
+            <li class="events__calendar--number inactive">
+              2
+              <div class="events__calendar--labels">
+                <div class="events__calendar--label label-green">
+                  Green Label
+                </div>
+                <div class="events__calendar--label label-yellow">
+                  <svg
+                    width="12"
+                    height="15"
+                    viewBox="0 0 12 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.373047 11.905L0.830751 10.9197L0.9897 10.5602C1.4923 9.3645 1.77725 8.07619 1.82921 6.76521L1.83788 6.32747V6.2003L1.84307 5.97253C1.93414 3.97812 3.21462 2.32029 4.93702 1.80362L4.93681 1.63655C4.93681 1.00642 5.44762 0.495605 6.07774 0.495605C6.70787 0.495605 7.21868 1.00642 7.21868 1.63655L7.21968 1.80399C8.9379 2.32 10.2161 3.97172 10.3118 5.96013L10.3176 6.2003V6.32747L10.3248 6.72547C10.372 8.0369 10.6524 9.32637 11.1506 10.524L11.3247 10.9197L11.7824 11.905H8.35962C8.35962 13.1652 7.33799 14.1869 6.07774 14.1869C4.8175 14.1869 3.79587 13.1652 3.79587 11.905H0.373047Z"
+                      fill="#475569"
+                    />
+                  </svg>
+                  Yellow Label
+                </div>
+                <div class="events__calendar--label label-blue">Blue Label</div>
+              </div>
+            </li>
+            <li class="events__calendar--number inactive">3</li>
+            <li class="events__calendar--number inactive">4</li>
+            <li class="events__calendar--number inactive">5</li>
+            <li class="events__calendar--number inactive">6</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__up">
+        <a href="index.html" class="header__logo-box">
+          <!-- <img
+            src="assets/imgs/cluster-logo-small.svg"
+            alt="Cluster logo"
+            class="header__logo"
+          /> -->
+          <svg
+            class="logo-orange"
+            width="21"
+            height="22"
+            viewBox="0 0 21 22"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17.6658 7.57613L16.321 7.93644L15.3602 4.35063C15.0948 3.36003 14.0775 2.7727 13.0869 3.03811L9.501 3.99894L9.1407 2.65426C8.80927 1.41714 7.53616 0.682165 6.29903 1.0136C5.06191 1.3451 4.32693 2.61814 4.65837 3.85526L5.01867 5.19994L1.43286 6.16078C0.442261 6.42625 -0.136103 7.44114 0.129371 8.43174L1.03766 11.8395L2.37782 11.4804C3.71354 11.1225 5.08894 11.9166 5.44685 13.2523C5.80476 14.5881 5.01067 15.9634 3.67495 16.3213L2.33472 16.6804L3.24301 20.0882C3.50848 21.0788 4.52577 21.6661 5.51637 21.4007L8.92298 20.4879L8.56268 19.1432C8.2047 17.8074 8.99879 16.4321 10.3345 16.0742C11.6703 15.7163 13.0456 16.5104 13.4035 17.8461L13.7638 19.1907L17.1704 18.278C18.161 18.0125 18.7483 16.9952 18.4829 16.0046L17.5221 12.4188L18.8668 12.0585C20.1039 11.727 20.8389 10.4539 20.5074 9.2168C20.1759 7.97975 18.9029 7.2447 17.6658 7.57613Z"
+              fill="#FD9A05"
+            />
+          </svg>
+          <svg
+            class="logo-red"
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.2198 15.3473L18.2354 14.363L20.8605 11.738C21.5856 11.0128 21.5857 9.83808 20.8605 9.11295L18.2354 6.48791L19.2198 5.50354C20.1254 4.59792 20.1254 3.12789 19.2198 2.22227C18.3142 1.31661 16.8442 1.31661 15.9385 2.22227L14.9542 3.20664L12.3291 0.581609C11.604 -0.143538 10.4359 -0.13699 9.71066 0.588191L7.21363 3.0787L8.19472 4.05979C9.17252 5.03759 9.17252 6.62571 8.19472 7.60359C7.21685 8.58139 5.62872 8.58139 4.65092 7.60359L3.66983 6.6225L1.1728 9.11295C0.447608 9.83808 0.447608 11.0128 1.1728 11.738L3.66655 14.2317L4.65092 13.2474C5.62879 12.2696 7.21691 12.2696 8.19472 13.2474C9.17259 14.2252 9.17259 15.8133 8.19472 16.7912L7.21034 17.7755L9.70409 20.2693C10.4293 20.9944 11.6039 20.9945 12.3291 20.2693L14.9542 17.6443L15.9385 18.6287C16.8442 19.5343 18.3142 19.5343 19.2198 18.6287C20.1254 17.723 20.1254 16.253 19.2198 15.3473Z"
+              fill="#CF2E0A"
+            />
+          </svg>
+          <svg
+            class="logo-blue"
+            width="22"
+            height="21"
+            viewBox="0 0 22 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.53985 14.1633L4.88453 13.803L5.84537 17.3888C6.11077 18.3794 7.12813 18.9668 8.11873 18.7014L11.7045 17.7405L12.0649 19.0852C12.3963 20.3223 13.6695 21.0573 14.9066 20.7259C16.1437 20.3944 16.8787 19.1213 16.5472 17.8842L16.1869 16.5395L19.7727 15.5787C20.7633 15.3133 21.3417 14.2983 21.0762 13.3077L20.1679 9.89994L18.8278 10.2591C17.492 10.617 16.1167 9.8229 15.7588 8.48718C15.4008 7.1514 16.1949 5.77607 17.5307 5.41816L18.8708 5.05909L17.9626 1.65131C17.6971 0.660707 16.6798 0.0733805 15.6892 0.338786L12.2826 1.25159L12.6429 2.59627C13.0008 3.93205 12.2068 5.30739 10.871 5.6653C9.53532 6.02321 8.15998 5.22911 7.80207 3.89339L7.44177 2.54872L4.03522 3.46145C3.04462 3.72693 2.4573 4.74421 2.7227 5.73481L3.68354 9.32069L2.33886 9.681C1.10174 10.0125 0.36669 11.2855 0.69819 12.5227C1.02969 13.7598 2.30273 14.4948 3.53985 14.1633Z"
+              fill="#2176FF"
+            />
+          </svg>
+          <svg
+            class="logo-green"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.80319 3.30081L7.16356 4.64556L3.57768 5.60633C2.58715 5.87181 1.99975 6.88909 2.26516 7.87969L3.22599 11.4656L1.88132 11.8259C0.644195 12.1574 -0.0907843 13.4304 0.240647 14.6675C0.572147 15.9047 1.84519 16.6396 3.08231 16.3082L4.42706 15.9479L5.38783 19.5337C5.6533 20.5243 6.66819 21.1027 7.65879 20.8373L11.0666 19.929L10.7075 18.5887C10.3496 17.253 11.1436 15.8776 12.4793 15.5197C13.8151 15.1618 15.1904 15.9559 15.5484 17.2916L15.9075 18.6318L19.3152 17.7236C20.3058 17.4581 20.8931 16.4408 20.6277 15.4502L19.7149 12.0437L18.3702 12.404C17.0345 12.7619 15.6591 11.9678 15.3012 10.6321C14.9433 9.29628 15.7374 7.92095 17.0731 7.56304L18.4178 7.20273L17.5051 3.79618C17.2396 2.80565 16.2223 2.21826 15.2317 2.48366L11.6458 3.4445L11.2855 2.09982C10.9541 0.8627 9.68097 0.127722 8.44392 0.459153C7.2068 0.790653 6.47175 2.06369 6.80319 3.30081Z"
+              fill="#14DC94"
+            />
+          </svg>
+        </a>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Courses</a>
+          </li>
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">Events</a>
+          </li>
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">Blog</a>
+          </li>
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">About us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__down">
+        <ul class="footer__list footer__list--privacy">
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">Privacy Policy</a>
+          </li>
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">Terms & Conditions</a>
+          </li>
+          <li class="footer__item--privacy">
+            <a href="#" class="footer__link">Copyrights</a>
+          </li>
+        </ul>
+
+        <p class="footer__copyright">
+          All copyrights reserved © Cluster, 2009-2022
+        </p>
+      </div>
+    </footer>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <img
+          src="assets/imgs/close_big.svg"
+          alt="Close Icon"
+          class="popup__close"
+        />
+        <!-- <div class="popup__left"></div> -->
+        <img
+          src="./assets/imgs/pop-up-img-1.png"
+          alt="Popup img"
+          class="popup__left"
+        />
+
+        <div class="popup__right">
+          <div class="popup__heading">
+            <h4 class="heading-h4">Welcome to Cluster</h4>
+            <p class="popup__title-p">Please choose one option.</p>
+          </div>
+          <div class="popup__accounts">
+            <div class="popup__account">
+              <img src="assets/imgs/google-icon.svg" alt="Google icon" />
+              <p>Continue with Google</p>
+            </div>
+            <div class="popup__account">
+              <img src="assets/imgs/facebook-icon.svg" alt="Facebook icon" />
+              <p>Continue with Facebook</p>
+            </div>
+            <div class="popup__account">
+              <img src="assets/imgs/mail-icon.svg" alt="Mail icon" />
+              <p>Sign in with email</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

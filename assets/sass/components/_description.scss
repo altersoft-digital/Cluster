@@ -1,0 +1,71 @@
+.description {
+  &__up {
+    margin-bottom: 3.2rem;
+  }
+
+  &__text {
+    line-height: 2.6rem;
+    color: $color-primary-light-1;
+  }
+
+  &__down {
+    position: relative;
+    padding: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+    &::before {
+      content: "";
+      z-index: 9;
+      left: 3.2rem;
+      bottom: 0;
+      position: absolute;
+      height: 95%;
+      width: 100%;
+      max-width: 147px;
+      background-color: rgba(255, 229, 0, 0.2);
+      border-radius: 906px 906px 0px 0px;
+    }
+    &::after {
+      content: "";
+      z-index: 0;
+      left: 0;
+      bottom: 0;
+      position: absolute;
+      height: 100%;
+      max-height: 18.9rem;
+      width: 100%;
+      background: $color-primary-light-2;
+      border-radius: 12px;
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    height: 100%;
+  }
+
+  &__img {
+    position: relative;
+    bottom: 2.8rem;
+    z-index: 10;
+  }
+
+  &__instructor {
+    align-self: flex-end;
+  }
+
+  &__profession {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02em;
+    color: $color-tertiary-dark;
+  }
+
+  &__about {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}

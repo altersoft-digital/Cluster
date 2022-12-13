@@ -1,0 +1,94 @@
+.questions {
+  &__left {
+    grid-column: 1 / 3;
+    width: 100%;
+    max-width: 89.8rem;
+    margin: 8rem 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__right {
+    align-self: center;
+    grid-column: 3 / -1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  &__img-box {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 7px;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background-color: $color-secondary-light;
+    }
+  }
+
+  &__question-box {
+    padding: 3.2rem;
+
+    & svg {
+      transition: all 0.3s ease;
+    }
+    &.active {
+      & svg {
+        transform: rotate(180deg);
+      }
+
+      & .questions__question {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__question {
+    font-family: $font-primary;
+    font-weight: 400;
+  }
+
+  &__answer-box {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+
+  &__answer {
+    color: $color-primary-light-1;
+    padding: 3.2rem;
+    padding-top: 0;
+
+    // padding: 0 3.2rem 3.2rem 3.2rem;
+  }
+
+  &__question-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__faq {
+    background-color: $color-white;
+    border: 1px solid $color-primary-light-3;
+    border-radius: 12px;
+    cursor: pointer;
+    // padding: 3.2rem;
+
+    // transition: height 0.6s ease-in;
+    // animation: ScrollFromTop 0.5s ease-out 0.75s;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
