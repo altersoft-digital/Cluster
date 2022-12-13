@@ -44,7 +44,9 @@
 }
 
 .tablet-hidden {
-  display: none !important;
+  @include respond(tablet) {
+    display: none !important;
+  }
 }
 .tablet-show {
   display: none !important;
