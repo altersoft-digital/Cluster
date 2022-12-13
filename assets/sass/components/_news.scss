@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  @include respond(tab-port) {
+    gap: 12px;
+  }
   &__left {
     // grid-column: 1 / 8;
     // max-width: 89.9rem;
@@ -9,6 +12,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    @include respond(tab-port) {
+      gap: 16px;
+    }
+    @include respond(phone) {
+      gap: 8px;
+    }
     // margin-right: 2.4rem;
   }
 
@@ -20,12 +29,25 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include respond(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
   }
 
   &__text {
     font-size: 2rem;
     line-height: 3rem;
     color: $color-primary-light-1;
+    @include respond(phone) {
+      font-size: 12px;
+      line-height: 20px;
+    }
   }
 
   &__text-box {
@@ -40,9 +62,18 @@
     gap: 8px;
     letter-spacing: -0.02em;
     font-size: 1.8rem;
+    @include respond(tab-port) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    @include respond(phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
     .middle-dot {
       position: relative;
-      bottom: 3px;
+      display: flex;
+      line-height: 0;
       font-size: 3.2rem;
     }
   }
@@ -50,5 +81,23 @@
   &__img {
     width: 100%;
     height: auto;
+  }
+
+  &__right &__img {
+    height: 100%;
+  }
+  @include respond(phone) {
+    &__right &__date {
+      margin-top: 4px;
+    }
+  }
+
+  &__bigone-head &__img {
+    @include respond(tab-port) {
+      margin-bottom: 16px !important;
+    }
+    @include respond(phone) {
+      margin-bottom: 8px !important;
+    }
   }
 }

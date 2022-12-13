@@ -1,5 +1,4 @@
 .footer {
-  grid-column: center-start / center-end;
   background: $color-primary-light-2;
   border-radius: 2.4rem;
   display: flex;
@@ -7,37 +6,36 @@
   gap: 5.2rem;
   padding: 4rem;
   margin: 8rem 5.2rem 7.6rem 5.2rem;
-  font-size: 1.8rem;
+  font-size: 18px;
   line-height: 23px;
+  @include respond(small-desktop) {
+    margin: 6.4rem 2.4rem;
+  }
+  @include respond(tab-port) {
+    margin: 64px 2.4rem 44px 2.4rem;
+    gap: 32px;
+    padding: 24px;
+  }
+  @include respond(phone) {
+    gap: 24px;
+  }
   &__up,
   &__down {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  @include respond(phone) {
+    &__up {
+      gap: 20px;
+    }
   }
 
   .header__logo-box {
     &:hover svg {
-      //first idea of animation
-
-      // &.logo-orange {
-      //   top: 5px;
-      //   left: -12px;
-      // }
-      // &.logo-red {
-      //   top: -8px;
-      //   left: 19px;
-      // }
-      // &.logo-blue {
-      //   top: 22px;
-      //   left: 25px;
-      // }
-      // &.logo-green {
-      //   top: 31px;
-      // }
-
-      //second idea of animation
-
       &.logo-orange {
         top: 5px;
         left: -2px;
@@ -64,13 +62,18 @@
 
   &__list {
     list-style: none;
-    width: 100%;
-    max-width: 39.6rem;
+    width: auto;
+    gap: 32px;
+    row-gap: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     &--privacy {
       max-width: 47.9rem;
+    }
+    @include respond(phone) {
+      justify-content: unset;
     }
   }
 

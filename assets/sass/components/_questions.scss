@@ -3,11 +3,25 @@
     grid-column: 1 / 3;
     width: 100%;
     max-width: 89.8rem;
-    margin: 8rem 0;
-    margin-bottom: 0;
+
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      max-width: 100%;
+      gap: 12px;
+
+      & > .heading-secondary {
+        margin-bottom: 12px !important;
+        font-size: 24px;
+        line-height: 26px;
+        @include respond(phone) {
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+    }
   }
 
   &__right {
@@ -18,6 +32,18 @@
     flex-direction: column;
     align-items: center;
     gap: 3.2rem;
+    @include respond(tab-port) {
+      grid-column: 1 / -1;
+      max-width: 100%;
+      gap: 24px;
+    }
+    @include respond(phone) {
+      gap: 12px;
+      .heading-secondary--large {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
   }
 
   &__img-box {
@@ -31,14 +57,33 @@
       height: 26px;
       border-radius: 50%;
       background-color: $color-secondary-light;
+      @include respond(phone) {
+        width: 10px;
+        height: 10px;
+        top: 6px;
+        right: 6px;
+      }
     }
   }
 
   &__question-box {
     padding: 3.2rem;
-
+    @include respond(tab-port) {
+      padding: 24px;
+    }
+    @include respond(phone) {
+      padding: 16px;
+    }
     & svg {
       transition: all 0.3s ease;
+      @include respond(tab-port) {
+        width: 14px;
+        height: 8px;
+      }
+      @include respond(phone) {
+        width: 10px;
+        height: 6px;
+      }
     }
     &.active {
       & svg {
@@ -54,6 +99,14 @@
   &__question {
     font-family: $font-primary;
     font-weight: 400;
+    @include respond(tab-port) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    @include respond(phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__answer-box {
@@ -66,7 +119,10 @@
     color: $color-primary-light-1;
     padding: 3.2rem;
     padding-top: 0;
-
+    @include respond(tab-port) {
+      font-size: 16px;
+      line-height: 26px;
+    }
     // padding: 0 3.2rem 3.2rem 3.2rem;
   }
 
@@ -90,5 +146,15 @@
     display: flex;
     align-items: center;
     gap: 2rem;
+    @include respond(tab-port) {
+      margin-top: 8px;
+    }
+  }
+
+  &__img {
+    @include respond(phone) {
+      width: 80px;
+      height: 80px;
+    }
   }
 }

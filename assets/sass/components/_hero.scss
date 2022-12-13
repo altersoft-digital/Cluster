@@ -9,47 +9,83 @@
     max-height: 59.3rem;
   }
 
+  &__puzzles {
+    position: relative;
+    @include respond(tab-land) {
+      display: none;
+    }
+  }
+
   &__puzzle {
     position: absolute;
     right: 28.4rem;
     bottom: 17rem;
 
+    @include respond(small-desktop-2) {
+      position: absolute;
+      right: 22.4rem;
+      bottom: 17rem;
+    }
+
     &:nth-of-type(2) {
       right: 3rem;
       bottom: 3.7rem;
       transform: rotate(116deg);
+
+      @include respond(small-desktop-2) {
+        left: unset;
+        right: 2rem;
+        bottom: 3.7rem;
+        transform: rotate(121deg);
+      }
     }
     &:nth-of-type(3) {
       right: 35.4rem;
       bottom: 4px;
       transform: rotate(217deg);
+      @include respond(small-desktop-2) {
+        // left: 20.7rem;
+        left: 24.7rem;
+        bottom: -10px;
+        transform: rotate(217deg);
+      }
     }
     &:nth-of-type(4) {
       right: 60rem;
       bottom: 9.9rem;
       transform: rotate(302deg);
+
+      @include respond(small-desktop-2) {
+        left: 5px;
+        bottom: 9.9rem;
+        transform: rotate(302deg);
+      }
     }
   }
   &__right {
     align-self: center;
     padding-top: 5%;
     padding-left: 5.2rem;
+    @include respond(tab-land) {
+      grid-column: 1 / -1;
+      padding: 0;
+      text-align: center;
+      max-width: 334px;
+      margin: 0 auto;
+    }
     .heading-primary--main {
       max-width: 412px;
-      // mix-blend-mode: color-burn;
-      // &[data-overlay] {
-      //   mix-blend-mode: color-burn;
-      //   position: absolute;
-      //   left: 0;
-      //   top: 0;
-      //   color: #111;
-      //   z-index: -2;
-      //   opacity: 0.3;
-      // }
+      @include respond(tab-land) {
+        max-width: 100%;
+        margin-bottom: 16px;
+      }
     }
     h4 {
       font-weight: 500;
       color: $color-primary-light-1;
+      @include respond(tab-land) {
+        margin-bottom: 24px !important;
+      }
     }
   }
 
@@ -74,6 +110,9 @@
     bottom: 0;
     left: 0;
     height: 35.2rem;
+    @include respond(tab-land) {
+      height: 100%;
+    }
     width: 100%;
     background-color: $color-tertiary-light;
     // background-size: cover;

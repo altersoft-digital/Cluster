@@ -261,9 +261,50 @@ const swiper2 = new Swiper(".mySwiperReviews", {
     0: {
       slidesPerView: 1,
     },
+    // when window width is >= 600px
+    600: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    // when window width is >= 900px
+    900: {
+      slidesPerView: 1,
+    },
     // when window width is >= 1400px
-    1400: {
+    1000: {
       slidesPerView: 2,
     },
   },
 });
+
+const toggleActive = (el) =>
+  document.getElementById(el).classList.toggle("active");
+
+// STICKY HEADER
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function () {
+  myFunction();
+};
+
+// Get the header
+let mainHeader = document.querySelector(".header");
+
+// Get the offset position of the navbar
+let sticky = mainHeader.offsetTop;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    if (
+      !mainHeader.classList.contains("sticky") &&
+      !mainHeader.classList.contains("active")
+    ) {
+      mainHeader.classList.add("sticky");
+    }
+  } else {
+    if (mainHeader.classList.contains("sticky")) {
+      mainHeader.classList.remove("sticky");
+    }
+  }
+}

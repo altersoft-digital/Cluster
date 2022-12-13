@@ -1,10 +1,13 @@
 .course {
   position: relative;
   width: 100%;
-  max-width: 32.2rem;
+  // max-width: 32.2rem;
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  @include respond(phone) {
+    gap: 8px;
+  }
   text-decoration: none;
   color: inherit;
 
@@ -20,7 +23,11 @@
       padding: 8px 12px;
       letter-spacing: -0.02em;
       border-radius: 4px;
-
+      @include respond(phone) {
+        right: -3px;
+        top: -6px;
+        padding: 6px 10px;
+      }
       color: #ffffff;
     }
 
@@ -63,7 +70,7 @@
     justify-content: center;
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 16px;
-    height: 22rem;
+    height: auto;
     svg {
       transition: all 0.3s ease;
     }
@@ -97,13 +104,18 @@
   &__sub-heading {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 6px;
     font-size: 1.4rem;
+    @include respond(phone) {
+      gap: 2px;
+    }
 
     .course__middle-dot {
-      font-size: 2rem;
+      font-size: 20px;
       position: relative;
-      bottom: 1.5px;
+      display: flex;
+      line-height: 0;
     }
     line-height: 2rem;
     letter-spacing: -0.02em;
@@ -119,6 +131,9 @@
   }
   h3.heading-tertiary {
     transition: color 0.3s ease;
+    @include respond(phone) {
+      margin-bottom: 4px !important;
+    }
   }
 
   &:hover {

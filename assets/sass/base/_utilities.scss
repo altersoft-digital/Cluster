@@ -18,10 +18,40 @@
   gap: 7rem;
 }
 
-.responsive {
-  margin: 0 5.2rem;
+.mobile-hidden {
+  @include respond(phone) {
+    display: none !important;
+  }
 }
 
+.mobile-show {
+  display: none !important;
+  @include respond(phone) {
+    display: inline-block !important;
+  }
+}
+.mobile-small-hidden {
+  @include respond(phone-small) {
+    display: none !important;
+  }
+}
+
+.mobile-small-show {
+  display: none !important;
+  @include respond(phone-small) {
+    display: flex !important;
+  }
+}
+
+.tablet-hidden {
+  display: none !important;
+}
+.tablet-show {
+  display: none !important;
+  @include respond(tablet) {
+    display: flex !important;
+  }
+}
 .u-center-text {
   text-align: center !important;
 }

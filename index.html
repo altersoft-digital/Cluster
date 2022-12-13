@@ -9,9 +9,9 @@
       content="digital, product, agency, design, uiux, frontend, backend, website, create, project"
     />
     <meta name="author" content="Ascended" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <title>Cluster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@700&display=swap"
       rel="stylesheet"
@@ -21,6 +21,7 @@
       href="https://fonts.cdnfonts.com/css/euclid-circular-b"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
@@ -33,12 +34,18 @@
       sizes="16x16"
       href="./assets/imgs/cluster-logo-small.svg"
     />
-    <title>Cluster</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__left">
-        <a href="index.html" class="header__logo-box">
+        <a href="#" class="tablet-show">
+          <img
+            src="assets/imgs/cluster-logo-small.svg"
+            alt="Logo"
+            class="cluster-logo"
+          />
+        </a>
+        <a href="index.html" class="header__logo-box tablet-hidden">
           <!-- <img
             src="assets/imgs/cluster-logo-small.svg"
             alt="Cluster logo"
@@ -99,6 +106,19 @@
         </a>
 
         <ul class="header__list">
+          <form class="header__language-changer mobile-small-show">
+            <label for="language-changer-mobile" class="header__label"
+              ><img src="assets/imgs/Eng.png" alt="Eng Language"
+            /></label>
+            <select
+              name="language"
+              id="language-changer-mobile"
+              class="header__select"
+            >
+              <option value="Eng">Eng</option>
+              <option value="Geo">Geo</option>
+            </select>
+          </form>
           <li class="header__item">
             <a href="courses.html" class="header__link">Courses</a>
           </li>
@@ -114,7 +134,7 @@
         </ul>
       </div>
       <div class="header__right">
-        <form class="header__language-changer">
+        <form class="header__language-changer mobile-small-hidden">
           <label for="language-changer" class="header__label"
             ><img src="assets/imgs/Eng.png" alt="Eng Language"
           /></label>
@@ -178,13 +198,19 @@
               </svg>
             </a>
           </li>
+          <li
+            class="header__user-item tablet-show"
+            onclick="toggleActive('header')"
+          >
+            <span class="header__icon">&nbsp;</span>
+          </li>
         </ul>
       </div>
     </header>
 
     <section class="section-hero container swiper mySwiper">
       <div class="slider hero__slider swiper-wrapper">
-        <div class="section-hero--slide slider__slide active swiper-slide">
+        <div class="section-hero--slide slider__slide swiper-slide">
           <div class="hero__back"></div>
           <!-- <canvas id="canv" width="32" height="32"></canvas> -->
           <div class="hero__right">
@@ -203,35 +229,28 @@
             </h4>
             <a href="#" class="btn btn-courses">Explore Courses</a>
           </div>
-
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <!-- <div class="hero__name">
-        <h2 class="heading-secondary heading-secondary--white">
-          Ia Bersenadze
-        </h2>
-        <h4 class=" __grey">
-          Head Coach
-        </h4>
-      </div> -->
+          <div class="hero__puzzles">
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+          </div>
         </div>
         <div class="section-hero--slide slider__slide swiper-slide">
           <div class="hero__back"></div>
@@ -252,35 +271,28 @@
             </h4>
             <a href="#" class="btn btn-courses">Explore Courses</a>
           </div>
-
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <!-- <div class="hero__name">
-        <h2 class="heading-secondary heading-secondary--white">
-          Ia Bersenadze
-        </h2>
-        <h4 class=" __grey">
-          Head Coach
-        </h4>
-      </div> -->
+          <div class="hero__puzzles">
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+          </div>
         </div>
         <div class="section-hero--slide slider__slide swiper-slide">
           <div class="hero__back"></div>
@@ -301,35 +313,28 @@
             </h4>
             <a href="#" class="btn btn-courses">Explore Courses</a>
           </div>
-
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <!-- <div class="hero__name">
-        <h2 class="heading-secondary heading-secondary--white">
-          Ia Bersenadze
-        </h2>
-        <h4 class=" __grey">
-          Head Coach
-        </h4>
-      </div> -->
+          <div class="hero__puzzles">
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+          </div>
         </div>
         <div class="section-hero--slide slider__slide swiper-slide">
           <div class="hero__back"></div>
@@ -350,35 +355,28 @@
             </h4>
             <a href="#" class="btn btn-courses">Explore Courses</a>
           </div>
-
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <!-- <div class="hero__name">
-        <h2 class="heading-secondary heading-secondary--white">
-          Ia Bersenadze
-        </h2>
-        <h4 class=" __grey">
-          Head Coach
-        </h4>
-      </div> -->
+          <div class="hero__puzzles">
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+          </div>
         </div>
         <div class="section-hero--slide slider__slide swiper-slide">
           <div class="hero__back"></div>
@@ -399,44 +397,31 @@
             </h4>
             <a href="#" class="btn btn-courses">Explore Courses</a>
           </div>
-
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <img
-            src="assets/imgs/puzzle-img.png"
-            alt="puzzle"
-            class="hero__puzzle"
-          />
-          <!-- <div class="hero__name">
-        <h2 class="heading-secondary heading-secondary--white">
-          Ia Bersenadze
-        </h2>
-        <h4 class=" __grey">
-          Head Coach
-        </h4>
-      </div> -->
+          <div class="hero__puzzles">
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+            <img
+              src="assets/imgs/puzzle-img.png"
+              alt="puzzle"
+              class="hero__puzzle"
+            />
+          </div>
         </div>
       </div>
-      <div class="slider__pagination-box pagination swiper-pagination">
-        <!-- <span class="slider__pagination active"></span> -->
-        <!-- <span class="slider__pagination"></span>
-        <span class="slider__pagination"></span>
-        <span class="slider__pagination"></span>
-        <span class="slider__pagination"></span> -->
-      </div>
+      <div class="slider__pagination-box pagination swiper-pagination"></div>
     </section>
 
     <section class="section-companies container">
@@ -673,15 +658,6 @@
       </div>
     </section>
     <section class="section-news container">
-      <!-- <div class="course__heading course__heading--news">
-        <h2 class="heading-secondary">News</h2>
-        <a
-          href="#"
-          class="btn__see-all heading-primary--sub heading-primary--sub__light"
-          >See all</a
-        >
-      </div> -->
-
       <div class="news__left">
         <div class="news__bigone-head">
           <img
@@ -867,7 +843,14 @@
     </section>
     <footer class="footer">
       <div class="footer__up">
-        <a href="index.html" class="header__logo-box">
+        <a href="#" class="tablet-show">
+          <img
+            src="assets/imgs/cluster-logo-small.svg"
+            alt="Logo"
+            class="cluster-logo"
+          />
+        </a>
+        <a href="index.html" class="header__logo-box tablet-hidden">
           <!-- <img
             src="assets/imgs/cluster-logo-small.svg"
             alt="Cluster logo"
