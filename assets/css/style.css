@@ -1609,6 +1609,16 @@ body {
 .single {
   max-width: 89.8rem;
   margin: 0 auto; }
+  .single__dot-p {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+  .single__dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: rgba(6, 22, 47, 0.6); }
   .single__head {
     width: 100%;
     display: flex;
