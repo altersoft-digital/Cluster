@@ -11,6 +11,15 @@
   // }
 }
 
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.white {
+  color: $color-white;
+}
+
 .layout-two-side {
   display: grid;
   grid-template-columns: 3.11fr 1.59fr;

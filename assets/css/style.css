@@ -66,7 +66,8 @@ body {
   color: transparent;
   font-style: normal;
   font-family: "Anek Latin";
-  backface-visibility: hidden; }
+  font-size: 48px;
+  line-height: 61px; }
   .heading-primary--main {
     font-family: "Anek Latin";
     display: block;
@@ -136,6 +137,13 @@ body {
     .container {
       max-width: 100%;
       margin: 0 2.4rem; } }
+
+.img {
+  width: 100%;
+  height: auto; }
+
+.white {
+  color: #fff; }
 
 .layout-two-side {
   display: grid;
@@ -314,6 +322,9 @@ body {
 
 .btn__message, .btn__message:link, .btn__message:visited {
   background-color: #14dc94; }
+
+.btn__border-grey {
+  border: 1px solid rgba(6, 22, 47, 0.2); }
 
 .btn--radius-8px, .btn--radius-8px:link, .btn--radius-8px:visited {
   border-radius: 8px; }
@@ -1435,7 +1446,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem; }
-  .profile__main {
+  .profile__edit {
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
     margin-bottom: 5.2rem; }
@@ -1520,6 +1531,107 @@ body {
     gap: 2.4rem; }
     .profile__btns .btn__white {
       border: 1px solid rgba(6, 22, 47, 0.2); }
+  .profile__booked {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef; }
+    .profile__booked .heading-secondary {
+      grid-column: 1 / -1; }
+    .profile__booked .course .course__img-box {
+      padding-top: 3.2rem;
+      padding-bottom: 3.2rem; }
+    .profile__booked--start-date {
+      color: #3970ce; }
+
+.archive {
+  margin-bottom: 8rem; }
+  .archive__hero {
+    padding-left: 28rem;
+    background-image: linear-gradient(90deg, rgba(6, 22, 47, 0.7) 29.56%, rgba(6, 22, 47, 0) 74.95%), url(../imgs/news1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center; }
+    .archive__hero--text {
+      margin: auto 0;
+      max-width: 435px; }
+      .archive__hero--text .heading-tertiary {
+        color: rgba(255, 255, 255, 0.7); }
+    .archive__hero--readmore {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff; }
+      .archive__hero--readmore svg {
+        margin-left: 6px;
+        transition: all 0.3s; }
+      .archive__hero--readmore:hover svg {
+        transform: translateX(2px); }
+  .archive__content {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7.2rem; }
+  .archive__post:nth-child(even) {
+    margin-top: 5.2rem; }
+  .archive__post--img {
+    border-radius: 16px;
+    transition: all 0.4s; }
+  .archive__post--readmore {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3970ce; }
+    .archive__post--readmore svg {
+      margin-left: 6px;
+      transition: all 0.4s; }
+      .archive__post--readmore svg path {
+        fill: #3970ce; }
+    .archive__post--readmore:hover {
+      color: rgba(57, 112, 206, 0.8); }
+      .archive__post--readmore:hover svg {
+        transform: translateX(2px); }
+        .archive__post--readmore:hover svg path {
+          fill: rgba(57, 112, 206, 0.8); }
+  .archive__img-box {
+    border-radius: 16px;
+    display: flex;
+    overflow: hidden;
+    height: auto; }
+  .archive__showmore {
+    margin-top: 7rem;
+    grid-column: 1 / -1;
+    justify-self: center; }
+
+.single {
+  max-width: 89.8rem;
+  margin: 0 auto; }
+  .single__head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .single__icons {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem; }
+    .single__icons svg {
+      display: inline-block;
+      width: 24px;
+      height: 24px; }
+  .single__text {
+    font-weight: 400;
+    color: rgba(6, 22, 47, 0.7); }
+  .single__continue-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.4rem;
+    row-gap: 3.2rem; }
+    .single__continue-posts .heading-secondary {
+      grid-column: 1 / -1; }
 
 .header {
   padding: 3.2rem 5.2rem;
@@ -1753,7 +1865,7 @@ body {
   flex-direction: column;
   gap: 5.2rem;
   padding: 4rem;
-  margin: 8rem 5.2rem 7.6rem 5.2rem;
+  margin: 8rem 5.2rem 4.6rem 5.2rem;
   font-size: 18px;
   line-height: 23px; }
   @media only screen and (max-width: 93em) {

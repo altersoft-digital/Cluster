@@ -12,7 +12,8 @@ body {
   color: transparent;
   font-style: normal;
   font-family: $font-secondary;
-  backface-visibility: hidden;
+  font-size: 48px;
+  line-height: 61px;
   // margin-bottom: 6rem;
 
   &--main {

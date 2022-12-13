@@ -112,6 +112,9 @@
       background-color: $color-secondary-light;
     }
   }
+  &__border-grey {
+    border: 1px solid rgba(6, 22, 47, 0.2);
+  }
 
   &--radius-8px {
     &,
