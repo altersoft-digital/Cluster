@@ -1,0 +1,122 @@
+.profile {
+  max-width: 898px;
+  margin: 5.6rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  &__main {
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef;
+    margin-bottom: 5.2rem;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    &--img-box {
+      width: 13rem;
+      height: 13rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.5px solid rgba(6, 22, 47, 0.2);
+      border-radius: 50%;
+      & img {
+        width: 11.8rem;
+        height: 11.8rem;
+      }
+    }
+  }
+
+  &__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececef;
+    padding-bottom: 2rem;
+    &:nth-of-type(3) {
+      padding-bottom: 4.2rem;
+    }
+    &:nth-of-type(4) {
+      border: none;
+    }
+
+    &--input {
+      border: 1px solid rgba(6, 22, 47, 0.1);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 552px;
+      padding: 20px 32px;
+    }
+
+    &--right {
+      width: 100%;
+      max-width: 552px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      & img {
+        width: 80px;
+        height: 80px;
+      }
+      &--options {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+      }
+    }
+
+    &--btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      border-bottom: 1px solid #fff;
+      transition: all 0.3s;
+      &.red {
+        color: #cf3a40;
+        &:hover {
+          border-color: #3970ce;
+        }
+      }
+      &.blue {
+        color: #3970ce;
+        &:hover {
+          border-color: #cf3a40;
+        }
+      }
+    }
+
+    &--left {
+      max-width: 26.7rem;
+    }
+  }
+
+  &__img-box {
+    padding: 4px;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(6, 22, 47, 0.2);
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2.4rem;
+    .btn__white {
+      border: 1px solid rgba(6, 22, 47, 0.2);
+    }
+  }
+}

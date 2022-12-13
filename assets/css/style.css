@@ -1429,6 +1429,98 @@ body {
   .calendar__day.inactive {
     color: rgba(6, 22, 47, 0.4); }
 
+.profile {
+  max-width: 898px;
+  margin: 5.6rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem; }
+  .profile__main {
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef;
+    margin-bottom: 5.2rem; }
+  .profile__head {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 3rem; }
+    .profile__head--img-box {
+      width: 13rem;
+      height: 13rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1.5px solid rgba(6, 22, 47, 0.2);
+      border-radius: 50%; }
+      .profile__head--img-box img {
+        width: 11.8rem;
+        height: 11.8rem; }
+  .profile__option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececef;
+    padding-bottom: 2rem; }
+    .profile__option:nth-of-type(3) {
+      padding-bottom: 4.2rem; }
+    .profile__option:nth-of-type(4) {
+      border: none; }
+    .profile__option--input {
+      border: 1px solid rgba(6, 22, 47, 0.1);
+      border-radius: 6px;
+      width: 100%;
+      max-width: 552px;
+      padding: 20px 32px; }
+    .profile__option--right {
+      width: 100%;
+      max-width: 552px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between; }
+      .profile__option--right img {
+        width: 80px;
+        height: 80px; }
+      .profile__option--right--options {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem; }
+    .profile__option--btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      border-bottom: 1px solid #fff;
+      transition: all 0.3s; }
+      .profile__option--btn.red {
+        color: #cf3a40; }
+        .profile__option--btn.red:hover {
+          border-color: #3970ce; }
+      .profile__option--btn.blue {
+        color: #3970ce; }
+        .profile__option--btn.blue:hover {
+          border-color: #cf3a40; }
+    .profile__option--left {
+      max-width: 26.7rem; }
+  .profile__img-box {
+    padding: 4px;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(6, 22, 47, 0.2); }
+  .profile__btns {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    gap: 2.4rem; }
+    .profile__btns .btn__white {
+      border: 1px solid rgba(6, 22, 47, 0.2); }
+
 .header {
   padding: 3.2rem 5.2rem;
   position: sticky;
