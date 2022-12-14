@@ -139,6 +139,9 @@
   @include respond(tab-port) {
     margin-bottom: 3.2rem !important;
   }
+  @include respond(phone) {
+    margin-bottom: 24px !important;
+  }
 }
 
 .u-margin-top-big {

@@ -1,5 +1,14 @@
 .privacy {
   margin-top: 7rem;
+  @include respond(tablet) {
+    margin-top: 4rem;
+  }
+  @include respond(phone) {
+    margin-top: 32px;
+  }
+  @include respond(phone-small) {
+    margin-top: 12px;
+  }
   &__container {
     max-width: 113rem;
     margin: 0 auto;
@@ -12,6 +21,12 @@
     @include flexCenter;
     gap: 3.2rem;
     border-bottom: 2px solid $color-primary-light-3;
+    @include respond(phone) {
+      gap: 24px;
+    }
+    @include respond(phone-small) {
+      gap: 16px;
+    }
   }
 
   &__li {
@@ -20,6 +35,12 @@
     padding-bottom: 2.4rem;
     cursor: pointer;
     transition: all 0.4s ease-in;
+    @include respond(phone) {
+      padding-bottom: 16px;
+    }
+    @include respond(phone-small) {
+      padding-bottom: 12px;
+    }
     &--line {
       position: absolute;
       left: 0;
@@ -92,5 +113,16 @@
     &--p {
       line-height: 2.8rem;
     }
+    @include respond(tab-phone) {
+      gap: 32px;
+      flex-direction: column;
+    }
+    @include respond(phone) {
+      gap: 24px;
+      flex-direction: column;
+    }
   }
+}
+.privacy-cannot-find {
+  margin-bottom: 0;
 }

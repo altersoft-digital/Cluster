@@ -282,6 +282,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
       margin-bottom: 3.2rem !important; } }
+  @media only screen and (max-width: 37.5em) {
+    .u-margin-bottom-big {
+      margin-bottom: 24px !important; } }
 
 .u-margin-top-big {
   margin-top: 5.2rem !important; }
@@ -2233,6 +2236,8 @@ body {
   @media only screen and (max-width: 37.5em) {
     .section-courses {
       gap: 16px; } }
+  .section-courses .course__img-box {
+    padding: 0; }
 
 .section-reviews {
   position: relative;
@@ -3036,6 +3041,15 @@ body {
 
 .privacy {
   margin-top: 7rem; }
+  @media only screen and (max-width: 64em) {
+    .privacy {
+      margin-top: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .privacy {
+      margin-top: 32px; } }
+  @media only screen and (max-width: 25em) {
+    .privacy {
+      margin-top: 12px; } }
   .privacy__container {
     max-width: 113rem;
     margin: 0 auto; }
@@ -3047,12 +3061,24 @@ body {
     justify-content: center;
     gap: 3.2rem;
     border-bottom: 2px solid rgba(6, 22, 47, 0.1); }
+    @media only screen and (max-width: 37.5em) {
+      .privacy__ul {
+        gap: 24px; } }
+    @media only screen and (max-width: 25em) {
+      .privacy__ul {
+        gap: 16px; } }
   .privacy__li {
     position: relative;
     bottom: -1px;
     padding-bottom: 2.4rem;
     cursor: pointer;
     transition: all 0.4s ease-in; }
+    @media only screen and (max-width: 37.5em) {
+      .privacy__li {
+        padding-bottom: 16px; } }
+    @media only screen and (max-width: 25em) {
+      .privacy__li {
+        padding-bottom: 12px; } }
     .privacy__li--line {
       position: absolute;
       left: 0;
@@ -3085,6 +3111,17 @@ body {
       line-height: 3.8rem; }
     .privacy__text--p {
       line-height: 2.8rem; }
+    @media only screen and (max-width: 43.75em) {
+      .privacy__text {
+        gap: 32px;
+        flex-direction: column; } }
+    @media only screen and (max-width: 37.5em) {
+      .privacy__text {
+        gap: 24px;
+        flex-direction: column; } }
+
+.privacy-cannot-find {
+  margin-bottom: 0; }
 
 .contact {
   padding: 3.2rem;
