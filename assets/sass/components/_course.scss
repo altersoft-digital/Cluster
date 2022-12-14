@@ -84,6 +84,11 @@
         fill: $color-orange;
       }
     }
+    &--yellow svg {
+      & path {
+        fill: $color-orange;
+      }
+    }
     &--red svg {
       transform: rotate(50deg);
       & path {
@@ -155,4 +160,8 @@
       color: $color-primary-light-1;
     }
   }
+}
+
+.course-archive .course__img-box {
+  padding: 3.2rem 0 !important;
 }

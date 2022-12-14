@@ -611,6 +611,8 @@ body {
           height: 65px; } }
     .course__img-box--orange svg path {
       fill: #fdd661; }
+    .course__img-box--yellow svg path {
+      fill: #fdd661; }
     .course__img-box--red svg {
       transform: rotate(50deg); }
       .course__img-box--red svg path {
@@ -656,6 +658,9 @@ body {
     transform: scale(1.1); }
   .course:hover h3.heading-tertiary {
     color: rgba(6, 22, 47, 0.6); }
+
+.course-archive .course__img-box {
+  padding: 3.2rem 0 !important; }
 
 .review {
   width: 100%;
@@ -1691,6 +1696,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .profile {
+      margin-top: 32px; } }
   .profile__edit {
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
@@ -1713,7 +1721,9 @@ body {
         height: 11.8rem; }
   .profile__option {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 14px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ececef;
@@ -1782,6 +1792,12 @@ body {
     gap: 2.4rem;
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef; }
+    @media only screen and (max-width: 64em) {
+      .profile__booked {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media only screen and (max-width: 43.75em) {
+      .profile__booked {
+        grid-template-columns: repeat(2, 1fr); } }
     .profile__booked .heading-secondary {
       grid-column: 1 / -1; }
     .profile__booked .course .course__img-box {
@@ -1917,14 +1933,22 @@ body {
       .header__logo-box svg.logo-orange {
         top: 5px;
         left: -2px; }
+        .header__logo-box svg.logo-orange path {
+          fill: #fdd661; }
       .header__logo-box svg.logo-red {
         top: -2px;
         left: 9px; }
+        .header__logo-box svg.logo-red path {
+          fill: #cf3a40; }
       .header__logo-box svg.logo-blue {
         top: 19px;
         left: 15px; }
+        .header__logo-box svg.logo-blue path {
+          fill: #3970ce; }
       .header__logo-box svg.logo-green {
         top: 21px; }
+        .header__logo-box svg.logo-green path {
+          fill: #28bb90; }
     .header__logo-box:hover svg.logo-orange {
       top: 5px;
       left: -12px; }

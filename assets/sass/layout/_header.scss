@@ -31,18 +31,30 @@
       transition: all 0.4s ease;
 
       &.logo-orange {
+        path {
+          fill: $color-orange;
+        }
         top: 5px;
         left: -2px;
       }
       &.logo-red {
+        path {
+          fill: $color-red;
+        }
         top: -2px;
         left: 9px;
       }
       &.logo-blue {
+        path {
+          fill: $color-tertiary-dark;
+        }
         top: 19px;
         left: 15px;
       }
       &.logo-green {
+        path {
+          fill: $color-secondary-light;
+        }
         top: 21px;
       }
     }

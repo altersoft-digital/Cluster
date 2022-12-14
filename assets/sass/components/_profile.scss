@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-
+  @include respond(tab-port) {
+    margin-top: 32px;
+  }
   &__edit {
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
@@ -34,7 +36,9 @@
 
   &__option {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 14px;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #ececef;
@@ -123,6 +127,12 @@
   &__booked {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    @include respond(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(tab-phone) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     gap: 2.4rem;
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
