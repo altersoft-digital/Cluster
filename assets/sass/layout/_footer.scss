@@ -19,6 +19,9 @@
   @include respond(phone) {
     gap: 24px;
   }
+  @include respond(phone-small) {
+    margin: 40px 2.4rem 24px 2.4rem;
+  }
   &__up,
   &__down {
     display: flex;

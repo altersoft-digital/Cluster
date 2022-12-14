@@ -6,15 +6,14 @@
     align-items: center;
     gap: 6px;
     span {
-      position: relative;
-      bottom: 2.6px;
-      color: $color-primary-light-1;
-      font-size: 3rem;
+      background-color: $color-primary-light-1;
+      width: 4px;
+      height: 4px;
     }
   }
 
   &__days {
-    margin-top: 1.6rem;
+    margin-top: 16px;
     border: 1px solid $color-primary-light-3;
     border-radius: 16px;
     width: 100%;
@@ -22,10 +21,15 @@
 
   &__day {
     width: 100%;
-    padding: 2.4rem 3.2rem;
+    padding: 2.4rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    @include respond(phone-small) {
+      padding: 16pxa;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid $color-primary-light-3;
     }
@@ -35,10 +39,19 @@
       align-items: center;
       justify-content: space-between;
       gap: 5.2rem;
+      @include respond(tab-phone) {
+        gap: 40px;
+      }
+      @include respond(phone-small) {
+        gap: 16px;
+      }
       & div {
         display: flex;
         align-items: center;
         gap: 2.4rem;
+        @include respond(phone-small) {
+          gap: 8px;
+        }
       }
       svg {
         width: 1rem;
@@ -54,6 +67,7 @@
   &__which-day {
     text-transform: uppercase;
     color: rgba(6, 22, 47, 0.5);
+    width: max-content;
   }
 
   &__time {

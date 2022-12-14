@@ -57,10 +57,14 @@ html {
 body {
   font-family: "Euclid Circular B";
   color: #06162f;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 2rem; }
+  @media only screen and (max-width: 25em) {
+    body {
+      font-size: 14px;
+      line-height: 18px; } }
 
 .heading-primary {
   color: transparent;
@@ -77,6 +81,14 @@ body {
     line-height: 4.4rem;
     /* animation-delay: 3s; waits before start */
     /* animation-iteration-count: 3; how many times */ }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        font-size: 32px;
+        line-height: 35px; } }
+    @media only screen and (max-width: 25em) {
+      .heading-primary--main {
+        font-size: 24px;
+        line-height: 26px; } }
   .heading-primary--sub {
     font-family: "Euclid Circular B";
     display: block;
@@ -84,6 +96,14 @@ body {
     font-size: 1.6rem;
     line-height: 2.6rem;
     color: rgba(6, 22, 47, 0.6); }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        font-size: 14px;
+        line-height: 24px; } }
+    @media only screen and (max-width: 25em) {
+      .heading-primary--sub {
+        font-size: 12px;
+        line-height: 20px; } }
     .heading-primary--sub__grey {
       color: rgba(255, 255, 255, 0.6); }
     .heading-primary--sub__light {
@@ -102,6 +122,14 @@ body {
   .heading-secondary--large {
     font-size: 3.2rem;
     line-height: 3.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-secondary--large {
+        font-size: 24px;
+        line-height: 26px; } }
+    @media only screen and (max-width: 25em) {
+      .heading-secondary--large {
+        font-size: 18px;
+        line-height: 20px; } }
 
 .heading-tertiary {
   font-family: "Euclid Circular B";
@@ -121,6 +149,10 @@ body {
   /* identical to box height */
   letter-spacing: -0.02em;
   color: #06162f; }
+  @media only screen and (max-width: 25em) {
+    .heading-h4 {
+      font-size: 18px;
+      line-height: 20px; } }
 
 .sub-heading {
   font-weight: 500;
@@ -181,6 +213,16 @@ body {
     .tablet-show {
       display: flex !important; } }
 
+@media only screen and (max-width: 75em) {
+  .tab-land-hidden {
+    display: none !important; } }
+
+.tab-land-show {
+  display: none !important; }
+  @media only screen and (max-width: 75em) {
+    .tab-land-show {
+      display: inline-block !important; } }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -192,18 +234,32 @@ body {
 
 .u-margin-bottom-small {
   margin-bottom: 2.4rem !important; }
+  @media only screen and (max-width: 25em) {
+    .u-margin-bottom-small {
+      margin-bottom: 8px !important; }
+      .u-margin-bottom-small.heading-h4 {
+        margin-bottom: 16px !important; } }
 
 .u-margin-bottom-smallest {
   margin-bottom: 8px !important; }
+  @media only screen and (max-width: 25em) {
+    .u-margin-bottom-smallest {
+      margin-bottom: 4px !important; } }
 
 .u-margin-bottom-smallest-2 {
   margin-bottom: 1.6rem !important; }
+  @media only screen and (max-width: 25em) {
+    .u-margin-bottom-smallest-2 {
+      margin-bottom: 12px !important; } }
 
 .u-margin-bottom-smallest-3 {
   margin-bottom: 1.4rem !important; }
 
 .u-margin-bottom-smallest-4 {
   margin-bottom: 1.2rem !important; }
+  @media only screen and (max-width: 25em) {
+    .u-margin-bottom-smallest-4 {
+      margin-bottom: 8px !important; } }
 
 .u-margin-bottom-medium-1 {
   margin-bottom: 3.2rem !important; }
@@ -212,7 +268,10 @@ body {
   margin-bottom: 4rem !important; }
   @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-medium {
-      margin-bottom: 3rem !important; } }
+      margin-bottom: 3.2rem !important; } }
+  @media only screen and (max-width: 25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 24px !important; } }
 
 .u-margin-bottom-big {
   margin-bottom: 5.2rem !important; }
@@ -229,12 +288,21 @@ body {
 .road {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem; }
   .road__link {
     display: inline-block;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     transition: all 0.3s; }
+    @media only screen and (max-width: 37.5em) {
+      .road__link {
+        font-size: 16px;
+        line-height: 20px; } }
+    @media only screen and (max-width: 25em) {
+      .road__link {
+        font-size: 14px;
+        line-height: 18px; } }
     .road__link:hover {
       color: #fff; }
   .road svg {
@@ -505,9 +573,14 @@ body {
     justify-content: center;
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 16px;
-    height: auto; }
+    height: auto;
+    padding: 4.4rem 0; }
     .course__img-box svg {
       transition: all 0.3s ease; }
+      @media only screen and (max-width: 25em) {
+        .course__img-box svg {
+          width: 65px;
+          height: 65px; } }
     .course__img-box--orange svg path {
       fill: #fd9a05; }
     .course__img-box--red svg {
@@ -678,6 +751,9 @@ body {
         .review__name--sub {
           font-size: 12px;
           line-height: 15px; } }
+      @media only screen and (max-width: 25em) {
+        .review__name--sub {
+          margin-top: 4px; } }
   .review__text {
     margin-top: 1.6rem;
     font-size: 1.6rem;
@@ -1080,13 +1156,29 @@ body {
 .overview {
   padding: 5.2rem 0;
   padding-left: 4.2rem; }
+  @media only screen and (max-width: 75em) {
+    .overview {
+      padding-bottom: 0;
+      padding-left: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .overview {
+      padding-top: 32px; } }
   .overview__head {
     display: flex;
     flex-direction: column;
     gap: 2.4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__head {
+        gap: 16px; } }
+  .overview .details__preview {
+    max-width: 708px;
+    text-align: center; }
   .overview .heading-primary--main {
     color: #fff;
     position: relative; }
+    @media only screen and (max-width: 75em) {
+      .overview .heading-primary--main {
+        position: unset; } }
     .overview .heading-primary--main::before {
       content: "";
       position: absolute;
@@ -1095,14 +1187,31 @@ body {
       width: 10px;
       height: 4.4rem;
       background-color: #14dc94; }
+      @media only screen and (max-width: 75em) {
+        .overview .heading-primary--main::before {
+          top: unset;
+          left: 0;
+          width: 6px; } }
+      @media only screen and (max-width: 37.5em) {
+        .overview .heading-primary--main::before {
+          width: 6px;
+          height: 35px; } }
   .overview__details {
-    font-size: 1.4rem;
-    line-height: 2.6rem;
+    font-size: 14px;
+    line-height: 26px;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 2.4rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__details {
+        row-gap: 14px; } }
+    @media only screen and (max-width: 25em) {
+      .overview__details {
+        line-height: 18px;
+        row-gap: 8px; } }
   .overview__attenders, .overview__registers, .overview__language {
     display: flex;
     align-items: center;
@@ -1122,11 +1231,17 @@ body {
   .overview__language {
     gap: 8px; }
   .overview__text {
-    line-height: 2.6rem;
+    line-height: 26px;
     color: rgba(255, 255, 255, 0.6);
     max-width: 63.8rem; }
+    @media only screen and (max-width: 25em) {
+      .overview__text {
+        line-height: 18px; } }
   .overview__foot {
     margin-top: 1.8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__foot {
+        margin-top: 16px; } }
   .overview__start-date {
     display: flex;
     align-items: center;
@@ -1148,6 +1263,9 @@ body {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: rgba(255, 255, 255, 0.6); }
+    @media only screen and (max-width: 25em) {
+      .overview__pay {
+        margin-top: 32px; } }
 
 .guide__duration {
   line-height: 2.4rem;
@@ -1156,23 +1274,27 @@ body {
   align-items: center;
   gap: 6px; }
   .guide__duration span {
-    position: relative;
-    bottom: 2.6px;
-    color: rgba(6, 22, 47, 0.6);
-    font-size: 3rem; }
+    background-color: rgba(6, 22, 47, 0.6);
+    width: 4px;
+    height: 4px; }
 
 .guide__days {
-  margin-top: 1.6rem;
+  margin-top: 16px;
   border: 1px solid rgba(6, 22, 47, 0.1);
   border-radius: 16px;
   width: 100%; }
 
 .guide__day {
   width: 100%;
-  padding: 2.4rem 3.2rem;
+  padding: 2.4rem;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px; }
+  @media only screen and (max-width: 25em) {
+    .guide__day {
+      padding: 16pxa; } }
   .guide__day:not(:last-child) {
     border-bottom: 1px solid rgba(6, 22, 47, 0.1); }
   .guide__day--left {
@@ -1181,10 +1303,19 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 5.2rem; }
+    @media only screen and (max-width: 43.75em) {
+      .guide__day--left {
+        gap: 40px; } }
+    @media only screen and (max-width: 25em) {
+      .guide__day--left {
+        gap: 16px; } }
     .guide__day--left div {
       display: flex;
       align-items: center;
       gap: 2.4rem; }
+      @media only screen and (max-width: 25em) {
+        .guide__day--left div {
+          gap: 8px; } }
     .guide__day--left svg {
       width: 1rem;
       height: 1rem;
@@ -1194,7 +1325,8 @@ body {
 
 .guide__which-day {
   text-transform: uppercase;
-  color: rgba(6, 22, 47, 0.5); }
+  color: rgba(6, 22, 47, 0.5);
+  width: max-content; }
 
 .guide__time {
   color: rgba(6, 22, 47, 0.7); }
@@ -1203,6 +1335,9 @@ body {
 
 .description__up {
   margin-bottom: 3.2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .description__up {
+      margin-bottom: 0; } }
 
 .description__text {
   line-height: 2.6rem;
@@ -1211,6 +1346,8 @@ body {
 .description__down {
   position: relative;
   padding: 3.2rem;
+  padding-top: 0;
+  margin-top: 4rem;
   display: flex;
   align-items: center;
   gap: 3.2rem; }
@@ -1232,10 +1369,25 @@ body {
     bottom: 0;
     position: absolute;
     height: 100%;
-    max-height: 18.9rem;
     width: 100%;
     background: rgba(6, 22, 47, 0.03);
     border-radius: 12px; }
+  @media only screen and (max-width: 37.5em) {
+    .description__down {
+      margin-top: 24px;
+      padding: 24px;
+      flex-direction: column;
+      text-align: center;
+      gap: 8px; }
+      .description__down::before {
+        display: none; }
+      .description__down::after {
+        height: 90%; } }
+  @media only screen and (max-width: 25em) {
+    .description__down {
+      margin-top: 8px;
+      padding: 16px;
+      padding-bottom: 24px; } }
 
 .description__img-box {
   position: relative;
@@ -1245,24 +1397,37 @@ body {
   position: relative;
   bottom: 2.8rem;
   z-index: 10; }
+  @media only screen and (max-width: 37.5em) {
+    .description__img {
+      bottom: 0; } }
 
 .description__instructor {
   align-self: flex-end; }
 
 .description__profession {
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.5rem;
+  font-size: 12px;
+  line-height: 15px;
   letter-spacing: -0.02em;
   color: #2176ff; }
 
 .description__about {
-  font-size: 1.4rem;
-  line-height: 2.4rem; }
+  font-size: 14px;
+  line-height: 24px; }
+  @media only screen and (max-width: 25em) {
+    .description__about {
+      line-height: 22px; } }
 
 .course-right {
   width: 100%;
-  padding-top: 5.2rem; }
+  padding-top: 5.2rem;
+  max-width: 437px;
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    .course-right {
+      grid-row: 2;
+      justify-self: center;
+      padding-top: 0; } }
 
 .details {
   width: 100%;
@@ -1275,7 +1440,15 @@ body {
     padding: 3px; }
     .details__preview img {
       background: linear-gradient(180deg, rgba(6, 22, 47, 0.7) 0%, rgba(6, 22, 47, 0.14) 51.04%, rgba(6, 22, 47, 0.7) 100%), url(219108829_1904249003070345_3293118727913173931_n.jpg);
-      border-radius: 8px; }
+      border-radius: 8px;
+      width: 100%; }
+      @media only screen and (max-width: 75em) {
+        .details__preview img {
+          margin-top: 8px; } }
+      @media only screen and (max-width: 25em) {
+        .details__preview img {
+          margin-top: 0;
+          margin-bottom: 8px; } }
     .details__preview::before, .details__preview::after {
       content: "";
       position: absolute;
@@ -1314,7 +1487,12 @@ body {
     .details__preview:hover::after {
       border-left: 11px solid rgba(255, 255, 255, 0.6); }
   .details__container {
-    padding: 2.4rem; }
+    padding: 2.4rem;
+    padding-bottom: 32px; }
+    @media only screen and (max-width: 25em) {
+      .details__container {
+        padding: 16px;
+        padding-bottom: 32px; } }
   .details__price {
     font-weight: 500;
     font-size: 4rem;
@@ -1336,31 +1514,44 @@ body {
   .details__aside-text {
     font-style: italic;
     font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 14px;
+    line-height: 20px;
     color: rgba(6, 22, 47, 0.6);
     max-width: 30.3rem;
     margin: 0 auto;
     margin-bottom: 3.2rem; }
+    @media only screen and (max-width: 25em) {
+      .details__aside-text {
+        margin-bottom: 24px; } }
   .details__includes {
     display: flex;
     flex-direction: column;
     gap: 2.4rem; }
-  .details .heading-h4 {
-    position: relative; }
-    .details .heading-h4::before {
-      content: "";
-      position: absolute;
-      left: -2.4rem;
-      width: 3px;
-      height: 2.2rem;
-      background-color: #06162f; }
+    @media only screen and (max-width: 25em) {
+      .details__includes {
+        gap: 8px; }
+        .details__includes .heading-h4 {
+          margin-bottom: 8px; } }
+  .details .heading-h4::before {
+    content: "";
+    position: absolute;
+    left: 0.5px;
+    width: 3px;
+    height: 2.2rem;
+    background-color: #06162f; }
+    @media only screen and (max-width: 25em) {
+      .details .heading-h4::before {
+        height: 20px; } }
   .details__include {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.6rem; }
+    @media only screen and (max-width: 25em) {
+      .details__include {
+        gap: 12px; } }
     .details__include--text {
-      font-size: 1.4rem;
+      font-size: 14px;
+      line-height: 22px;
       color: rgba(6, 22, 47, 0.8); }
       .details__include--text span {
         font-weight: 500;
@@ -1383,7 +1574,13 @@ body {
     align-items: center;
     justify-content: center; }
     .calendar__head--arrow-box svg {
-      transition: all 0.4s; }
+      transition: all 0.4s;
+      width: 12px;
+      height: 16px; }
+      @media only screen and (max-width: 25em) {
+        .calendar__head--arrow-box svg {
+          width: 10px;
+          height: 14px; } }
       .calendar__head--arrow-box svg path {
         transition: all 0.4s; }
     .calendar__head--arrow-box:hover.small .left {
@@ -1395,8 +1592,12 @@ body {
 
 .calendar__date {
   font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.8rem; }
+  font-size: 14px;
+  line-height: 18px; }
+  @media only screen and (max-width: 25em) {
+    .calendar__date {
+      font-size: 12px;
+      line-height: 14px; } }
 
 .calendar ul {
   list-style-type: none; }
@@ -1407,6 +1608,9 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 9px; }
+  @media only screen and (max-width: 25em) {
+    .calendar__weeks {
+      padding: 6px; } }
 
 .calendar__week {
   font-weight: 500;
@@ -1414,6 +1618,10 @@ body {
   line-height: 11px;
   letter-spacing: 0.03em;
   text-transform: uppercase; }
+  @media only screen and (max-width: 25em) {
+    .calendar__week {
+      font-size: 6.39589px;
+      line-height: 9px; } }
 
 .calendar__days {
   margin-top: 1.6rem;
@@ -1421,22 +1629,29 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(38.99px, 1fr));
   column-gap: 1.7rem;
   row-gap: 7px; }
+  @media only screen and (max-width: 25em) {
+    .calendar__days {
+      column-gap: 7px; } }
 
 .calendar__day {
-  width: 38.99px;
-  height: 38.99px;
+  width: 31.17px;
+  height: 31.17px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 500; }
+  @media only screen and (max-width: 25em) {
+    .calendar__day {
+      font-size: 13.3604px;
+      line-height: 16px; } }
   .calendar__day.active {
-    background: #1294f2;
+    background: #3970ce;
     border-radius: 92.8401px;
     color: #fff; }
   .calendar__day.during {
     background: #ecf2ff;
     border-radius: 92.8401px;
-    color: #2f80ed; }
+    color: #3970ce; }
   .calendar__day.inactive {
     color: rgba(6, 22, 47, 0.4); }
 
@@ -1656,6 +1871,9 @@ body {
   @media only screen and (max-width: 93em) {
     .header {
       padding: 2.4rem; } }
+  @media only screen and (max-width: 64em) {
+    .header {
+      height: 80px; } }
   .header.sticky {
     box-shadow: 0 4px 8px rgba(6, 22, 47, 0.1); }
   .header__logo-box {
@@ -1889,6 +2107,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .footer {
       gap: 24px; } }
+  @media only screen and (max-width: 25em) {
+    .footer {
+      margin: 40px 2.4rem 24px 2.4rem; } }
   .footer__up, .footer__down {
     display: flex;
     align-items: center;
@@ -2254,6 +2475,23 @@ body {
 
 .section-quote {
   padding: 5.8rem 0 6.8rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .section-quote {
+      padding: 32px 0; }
+      .section-quote .quote {
+        flex-direction: column; }
+        .section-quote .quote img {
+          width: 120px;
+          height: 120px; }
+      .section-quote .heading-primary--main {
+        font-size: 32px;
+        line-height: 35px; } }
+  @media only screen and (max-width: 25em) {
+    .section-quote {
+      padding: 24px 0; }
+      .section-quote .heading-primary--main {
+        font-size: 24px;
+        line-height: 26px; } }
 
 .section-cannot-find {
   background: rgba(33, 118, 255, 0.1);
@@ -2265,6 +2503,18 @@ body {
   justify-content: center;
   flex-direction: column;
   gap: 3.2rem; }
+  @media only screen and (max-width: 93em) {
+    .section-cannot-find {
+      margin: 8rem 2.4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-cannot-find {
+      border-radius: 0;
+      margin: 32px 0;
+      padding: 32px 2.4rem; } }
+  @media only screen and (max-width: 25em) {
+    .section-cannot-find {
+      margin: 24px 0;
+      padding: 24px 2.4rem; } }
   .section-cannot-find .cannot-find__text-box {
     display: flex;
     align-items: center;
@@ -2281,12 +2531,17 @@ body {
     border-radius: 8px; }
 
 .main-course {
-  margin-top: 3.2rem;
   position: relative; }
   .main-course .container {
     display: grid;
     grid-template-columns: 3.11fr 1.56fr;
     gap: 5.2rem; }
+    @media only screen and (max-width: 75em) {
+      .main-course .container {
+        grid-template-columns: 1fr; } }
+    @media only screen and (max-width: 25em) {
+      .main-course .container {
+        gap: 40px; } }
 
 .course-head-back {
   background-image: linear-gradient(87.74deg, #06162f 3.46%, #1c4033 87.44%);
@@ -2296,6 +2551,9 @@ body {
   width: 100%;
   height: 43.2rem;
   z-index: -1; }
+  @media only screen and (max-width: 75em) {
+    .course-head-back {
+      height: 119.2rem; } }
   .course-head-back::before {
     content: "";
     background-image: url(../imgs/frame.png);
@@ -2307,32 +2565,70 @@ body {
     height: 100%;
     width: 100%;
     max-width: 59.8rem; }
+    @media only screen and (max-width: 75em) {
+      .course-head-back::before {
+        display: none; } }
 
 .course__companies {
   margin: 3.2rem 0 4rem 0;
   padding: 2.4rem 0 3.2rem 3.2rem;
   background: rgba(33, 118, 255, 0.1);
   border-radius: 12px; }
+  @media only screen and (max-width: 75em) {
+    .course__companies {
+      text-align: center;
+      padding: 3.2rem 2.4rem;
+      margin-top: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .course__companies {
+      margin-bottom: 32px; } }
+  @media only screen and (max-width: 25em) {
+    .course__companies {
+      margin-bottom: 24px; } }
 
-.course__guide {
+.course__guide, .course__description, .course__feedback {
   margin-bottom: 4rem; }
+  @media only screen and (max-width: 43.75em) {
+    .course__guide, .course__description, .course__feedback {
+      margin-bottom: 32px; } }
+  @media only screen and (max-width: 25em) {
+    .course__guide, .course__description, .course__feedback {
+      margin-bottom: 24px; } }
 
-.course__description {
-  margin-bottom: 4rem; }
+.course__feedback .heading-h4 span {
+  font-weight: 500;
+  color: rgba(6, 22, 47, 0.5);
+  margin-left: 6px; }
 
-.course__feedback {
-  margin-bottom: 4rem; }
-  .course__feedback .heading-h4 span {
-    font-weight: 500;
-    color: rgba(6, 22, 47, 0.5);
-    margin-left: 6px; }
+.course__feedback .review {
+  padding: 2.4rem 2.4rem 3.2rem 2.4rem; }
 
 .course__courses {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 2.4rem;
   row-gap: 3.2rem;
   justify-items: center; }
+  @media only screen and (max-width: 75em) {
+    .course__courses {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 24px;
+      row-gap: 24px; } }
+  @media only screen and (max-width: 64em) {
+    .course__courses {
+      grid-template-columns: repeat(3, 1fr); } }
+  @media only screen and (max-width: 43.75em) {
+    .course__courses {
+      grid-template-columns: repeat(2, 1fr); }
+      .course__courses .course__img-box {
+        padding: 32px 0; } }
+  @media only screen and (max-width: 25em) {
+    .course__courses {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 16px; }
+      .course__courses .course__img-box {
+        padding: 16px 0; } }
   .course__courses .course {
     max-width: 42rem; }
 
@@ -2340,20 +2636,36 @@ body {
   max-width: 41.8rem;
   line-height: 2.4rem;
   color: rgba(6, 22, 47, 0.6); }
+  @media only screen and (max-width: 75em) {
+    .companies__text {
+      max-width: 100%; } }
 
 .companies__box {
   margin-top: 3.2rem;
   display: flex;
   align-items: center;
   gap: 3.2rem; }
+  @media only screen and (max-width: 75em) {
+    .companies__box {
+      flex-wrap: wrap;
+      justify-content: center; } }
+  @media only screen and (max-width: 25em) {
+    .companies__box {
+      gap: 16px; } }
 
 .feedback {
   display: flex;
   flex-direction: column;
   gap: 1.6rem; }
+  @media only screen and (max-width: 25em) {
+    .feedback {
+      grid-gap: 12px; } }
   .feedback .review {
     max-width: 100%;
     padding-bottom: 3.2rem; }
+    @media only screen and (max-width: 25em) {
+      .feedback .review {
+        padding: 16px; } }
 
 .registered {
   margin-top: 7rem; }

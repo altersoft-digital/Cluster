@@ -63,6 +63,17 @@
     display: flex !important;
   }
 }
+.tab-land-hidden {
+  @include respond(tab-land) {
+    display: none !important;
+  }
+}
+.tab-land-show {
+  display: none !important;
+  @include respond(tab-land) {
+    display: inline-block !important;
+  }
+}
 .u-center-text {
   text-align: center !important;
 }
@@ -76,14 +87,26 @@
 
 .u-margin-bottom-small {
   margin-bottom: 2.4rem !important;
+  @include respond(phone-small) {
+    margin-bottom: 8px !important;
+    &.heading-h4 {
+      margin-bottom: 16px !important;
+    }
+  }
 }
 
 .u-margin-bottom-smallest {
   margin-bottom: 8px !important;
+  @include respond(phone-small) {
+    margin-bottom: 4px !important;
+  }
 }
 
 .u-margin-bottom-smallest-2 {
   margin-bottom: 1.6rem !important;
+  @include respond(phone-small) {
+    margin-bottom: 12px !important;
+  }
 }
 
 .u-margin-bottom-smallest-3 {
@@ -92,6 +115,9 @@
 
 .u-margin-bottom-smallest-4 {
   margin-bottom: 1.2rem !important;
+  @include respond(phone-small) {
+    margin-bottom: 8px !important;
+  }
 }
 
 .u-margin-bottom-medium-1 {
@@ -101,7 +127,10 @@
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
   @include respond(tab-port) {
-    margin-bottom: 3rem !important;
+    margin-bottom: 3.2rem !important;
+  }
+  @include respond(phone-small) {
+    margin-bottom: 24px !important;
   }
 }
 
@@ -123,6 +152,7 @@
 .road {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 
   &__link {
@@ -130,6 +160,14 @@
     color: $color-grey--light;
     text-decoration: none;
     transition: all 0.3s;
+    @include respond(phone) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @include respond(phone-small) {
+      font-size: 14px;
+      line-height: 18px;
+    }
     &:hover {
       color: $color-white;
     }

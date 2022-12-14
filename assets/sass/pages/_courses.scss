@@ -1,12 +1,46 @@
 .section-quote {
   padding: 5.8rem 0 6.8rem 0;
+  @include respond(phone) {
+    padding: 32px 0;
+    .quote {
+      flex-direction: column;
+      img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+    .heading-primary--main {
+      font-size: 32px;
+      line-height: 35px;
+    }
+  }
+  @include respond(phone-small) {
+    padding: 24px 0;
+    .heading-primary--main {
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
 }
 
 .section-cannot-find {
   background: $color-tertiary-light;
   border-radius: 3.2rem;
   margin: 8rem auto;
+
   padding: 5.2rem 0;
+  @include respond(small-desktop) {
+    margin: 8rem 2.4rem;
+  }
+  @include respond(phone) {
+    border-radius: 0;
+    margin: 32px 0;
+    padding: 32px 2.4rem;
+  }
+  @include respond(phone-small) {
+    margin: 24px 0;
+    padding: 24px 2.4rem;
+  }
 
   @include flexCenter;
   flex-direction: column;

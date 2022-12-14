@@ -1,6 +1,13 @@
 .course-right {
   width: 100%;
   padding-top: 5.2rem;
+  max-width: 437px;
+  position: relative;
+  @include respond(tab-land) {
+    grid-row: 2;
+    justify-self: center;
+    padding-top: 0;
+  }
 }
 
 .details {
@@ -21,6 +28,14 @@
         ),
         url(219108829_1904249003070345_3293118727913173931_n.jpg);
       border-radius: 8px;
+      width: 100%;
+      @include respond(tab-land) {
+        margin-top: 8px;
+      }
+      @include respond(phone-small) {
+        margin-top: 0;
+        margin-bottom: 8px;
+      }
     }
     &::before,
     &::after {
@@ -71,6 +86,11 @@
 
   &__container {
     padding: 2.4rem;
+    padding-bottom: 32px;
+    @include respond(phone-small) {
+      padding: 16px;
+      padding-bottom: 32px;
+    }
   }
 
   &__price {
@@ -104,39 +124,53 @@
   &__aside-text {
     font-style: italic;
     font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: 14px;
+    line-height: 20px;
     color: $color-primary-light-1;
     max-width: 30.3rem;
     margin: 0 auto;
     margin-bottom: 3.2rem;
+    @include respond(phone-small) {
+      margin-bottom: 24px;
+    }
   }
 
   &__includes {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include respond(phone-small) {
+      gap: 8px;
+      .heading-h4 {
+        margin-bottom: 8px;
+      }
+    }
   }
 
   .heading-h4 {
-    position: relative;
     &::before {
       content: "";
       position: absolute;
-      left: -2.4rem;
+      left: 0.5px;
       width: 3px;
       height: 2.2rem;
+      @include respond(phone-small) {
+        height: 20px;
+      }
       background-color: $color-primary;
     }
   }
 
   &__include {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.6rem;
-
+    @include respond(phone-small) {
+      gap: 12px;
+    }
     &--text {
-      font-size: 1.4rem;
+      font-size: 14px;
+      line-height: 22px;
       color: rgba(6, 22, 47, 0.8);
       span {
         font-weight: 500;

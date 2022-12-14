@@ -2,10 +2,14 @@ body {
   font-family: $font-primary;
 
   color: $color-primary;
-  font-size: 1.6rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 2rem;
+  @include respond(phone-small) {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }
 
 .heading-primary {
@@ -23,7 +27,14 @@ body {
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 4.4rem;
-
+    @include respond(phone) {
+      font-size: 32px;
+      line-height: 35px;
+    }
+    @include respond(phone-small) {
+      font-size: 24px;
+      line-height: 26px;
+    }
     // animation-name: moveInLeft;
     // animation-duration: 1s;
     // animation-timing-function: ease-out;
@@ -41,6 +52,14 @@ body {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.6rem;
+    @include respond(phone) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    @include respond(phone-small) {
+      font-size: 12px;
+      line-height: 20px;
+    }
     color: $color-primary-light-1;
     // animation: moveInRight 1s ease-out;
     // @include respond(phone) {
@@ -71,6 +90,14 @@ body {
   &--large {
     font-size: 3.2rem;
     line-height: 3.5rem;
+    @include respond(phone) {
+      font-size: 24px;
+      line-height: 26px;
+    }
+    @include respond(phone-small) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 
   // text-align: center;
@@ -100,6 +127,10 @@ body {
   font-weight: 700;
   font-size: 2rem;
   line-height: 2.2rem;
+  @include respond(phone-small) {
+    font-size: 18px;
+    line-height: 20px;
+  }
   /* identical to box height */
 
   letter-spacing: -0.02em;

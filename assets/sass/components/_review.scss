@@ -151,6 +151,9 @@
         font-size: 12px;
         line-height: 15px;
       }
+      @include respond(phone-small) {
+        margin-top: 4px;
+      }
     }
   }
 

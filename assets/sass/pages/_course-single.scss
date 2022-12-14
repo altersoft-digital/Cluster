@@ -1,10 +1,16 @@
 .main-course {
-  margin-top: 3.2rem;
+  // margin-top: 3.2rem;
   position: relative;
   .container {
     display: grid;
     grid-template-columns: 3.11fr 1.56fr;
     gap: 5.2rem;
+    @include respond(tab-land) {
+      grid-template-columns: 1fr;
+    }
+    @include respond(phone-small) {
+      gap: 40px;
+    }
   }
 }
 
@@ -15,6 +21,9 @@
   left: 0;
   width: 100%;
   height: 43.2rem;
+  @include respond(tab-land) {
+    height: 119.2rem;
+  }
   z-index: -1;
   &::before {
     content: "";
@@ -27,6 +36,9 @@
     height: 100%;
     width: 100%;
     max-width: 59.8rem;
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 }
 
@@ -36,31 +48,74 @@
     padding: 2.4rem 0 3.2rem 3.2rem;
     background: $color-tertiary-light;
     border-radius: 12px;
+    @include respond(tab-land) {
+      text-align: center;
+      padding: 3.2rem 2.4rem;
+      margin-top: 0;
+    }
+    @include respond(phone) {
+      margin-bottom: 32px;
+    }
+    @include respond(phone-small) {
+      margin-bottom: 24px;
+    }
   }
 
-  &__guide {
+  &__guide,
+  &__description,
+  &__feedback {
     margin-bottom: 4rem;
-  }
-
-  &__description {
-    margin-bottom: 4rem;
+    @include respond(tab-phone) {
+      margin-bottom: 32px;
+    }
+    @include respond(phone-small) {
+      margin-bottom: 24px;
+    }
   }
 
   &__feedback {
-    margin-bottom: 4rem;
     .heading-h4 span {
       font-weight: 500;
       color: rgba(6, 22, 47, 0.5);
       margin-left: 6px;
     }
+    .review {
+      padding: 2.4rem 2.4rem 3.2rem 2.4rem;
+    }
   }
 
   &__courses {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(42rem, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2.4rem;
     row-gap: 3.2rem;
     justify-items: center;
+    @include respond(tab-land) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 24px;
+      row-gap: 24px;
+    }
+    @include respond(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond(tab-phone) {
+      grid-template-columns: repeat(2, 1fr);
+      .course {
+        &__img-box {
+          padding: 32px 0;
+        }
+      }
+    }
+    @include respond(phone-small) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 16px;
+      row-gap: 16px;
+      .course {
+        &__img-box {
+          padding: 16px 0;
+        }
+      }
+    }
 
     .course {
       max-width: 42rem;
@@ -73,6 +128,9 @@
     max-width: 41.8rem;
     line-height: 2.4rem;
     color: $color-primary-light-1;
+    @include respond(tab-land) {
+      max-width: 100%;
+    }
   }
 
   &__box {
@@ -80,6 +138,13 @@
     display: flex;
     align-items: center;
     gap: 3.2rem;
+    @include respond(tab-land) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    @include respond(phone-small) {
+      gap: 16px;
+    }
   }
 }
 
@@ -87,8 +152,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  @include respond(phone-small) {
+    grid-gap: 12px;
+  }
   .review {
     max-width: 100%;
     padding-bottom: 3.2rem;
+    @include respond(phone-small) {
+      padding: 16px;
+    }
   }
 }

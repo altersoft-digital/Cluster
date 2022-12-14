@@ -19,7 +19,12 @@
       @include flexCenter;
       & svg {
         transition: all 0.4s;
-
+        width: 12px;
+        height: 16px;
+        @include respond(phone-small) {
+          width: 10px;
+          height: 14px;
+        }
         & path {
           transition: all 0.4s;
         }
@@ -42,8 +47,12 @@
 
   &__date {
     font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+    font-size: 14px;
+    line-height: 18px;
+    @include respond(phone-small) {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 
   ul {
@@ -55,13 +64,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 9px;
+    @include respond(phone-small) {
+      padding: 6px;
+    }
   }
 
   &__week {
     font-weight: 500;
     font-size: 8px;
     line-height: 11px;
+    @include respond(phone-small) {
+      font-size: 6.39589px;
+      line-height: 9px;
+    }
+
     letter-spacing: 0.03em;
     text-transform: uppercase;
   }
@@ -72,16 +90,22 @@
     grid-template-columns: repeat(auto-fit, minmax(38.99px, 1fr));
     column-gap: 1.7rem;
     row-gap: 7px;
+    @include respond(phone-small) {
+      column-gap: 7px;
+    }
   }
 
   &__day {
-    width: 38.99px;
-    height: 38.99px;
+    width: 31.17px;
+    height: 31.17px;
     @include flexCenter;
     font-weight: 500;
-
+    @include respond(phone-small) {
+      font-size: 13.3604px;
+      line-height: 16px;
+    }
     &.active {
-      background: #1294f2;
+      background: #3970ce;
       border-radius: 92.8401px;
       color: $color-white;
     }
@@ -89,7 +113,7 @@
     &.during {
       background: #ecf2ff;
       border-radius: 92.8401px;
-      color: #2f80ed;
+      color: #3970ce;
     }
 
     &.inactive {

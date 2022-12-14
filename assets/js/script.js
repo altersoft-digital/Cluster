@@ -31,11 +31,12 @@ const daysTag = document.querySelector(".calendar__days"),
   prevNextIconEventsEl = document.querySelectorAll(".arrow-box");
 let from = 10;
 let to = 22;
-let month = "November";
+
 // getting new date, current year and month
 let date = new Date(),
   currYear = date.getFullYear(),
   currMonth = date.getMonth();
+
 // storing full name of all months in array
 const months = [
   "January",
@@ -51,6 +52,7 @@ const months = [
   "November",
   "December",
 ];
+let month = months[currMonth];
 const renderCalendar = (from = null, to = null) => {
   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
     lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
@@ -231,52 +233,53 @@ function setPosition(el, left, right) {
   el.querySelector("span").style.left = left;
   el.querySelector("span").style.right = right;
 }
-
-const swiper = new Swiper(".mySwiper", {
-  // Optional parameters
-  // loop: true,
-  slidesPerView: 1,
-  spaceBetween: 10,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
-const swiper2 = new Swiper(".mySwiperReviews", {
-  // Optional parameters
-  slidesPerView: 2,
-  slidesPerGroup: 1,
-  loop: true,
-  loopFillGroupWithBlank: true,
-  spaceBetween: 24,
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination-reviews",
-    clickable: true,
-  },
-  breakpoints: {
-    // when window width is >= 0px
-    0: {
-      slidesPerView: 1,
+if (document.querySelector(".mySwiper")) {
+  const swiper = new Swiper(".mySwiper", {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
-    // when window width is >= 600px
-    600: {
-      slidesPerView: 2,
-      spaceBetween: 16,
+  });
+}
+if (document.querySelector(".mySwiperReviews")) {
+  const swiper2 = new Swiper(".mySwiperReviews", {
+    // Optional parameters
+    slidesPerView: 2,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    spaceBetween: 24,
+    // If we need pagination
+    pagination: {
+      el: ".swiper-pagination-reviews",
+      clickable: true,
     },
-    // when window width is >= 900px
-    900: {
-      slidesPerView: 1,
+    breakpoints: {
+      // when window width is >= 0px
+      0: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 600px
+      600: {
+        slidesPerView: 2,
+        spaceBetween: 16,
+      },
+      // when window width is >= 900px
+      900: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 1400px
+      1000: {
+        slidesPerView: 2,
+      },
     },
-    // when window width is >= 1400px
-    1000: {
-      slidesPerView: 2,
-    },
-  },
-});
-
+  });
+}
 const toggleActive = (el) =>
   document.getElementById(el).classList.toggle("active");
 

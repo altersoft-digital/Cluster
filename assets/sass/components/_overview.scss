@@ -1,15 +1,33 @@
 .overview {
   padding: 5.2rem 0;
   padding-left: 4.2rem;
+  @include respond(tab-land) {
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+  @include respond(phone) {
+    padding-top: 32px;
+  }
   &__head {
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include respond(phone) {
+      gap: 16px;
+    }
+  }
+
+  & .details__preview {
+    max-width: 708px;
+    text-align: center;
   }
 
   .heading-primary--main {
     color: $color-white;
     position: relative;
+    @include respond(tab-land) {
+      position: unset;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -18,17 +36,35 @@
       width: 10px;
       height: 4.4rem;
       background-color: $color-secondary-light;
+      @include respond(tab-land) {
+        top: unset;
+        left: 0;
+        width: 6px;
+      }
+      @include respond(phone) {
+        width: 6px;
+        height: 35px;
+      }
     }
   }
 
   &__details {
-    font-size: 1.4rem;
-    line-height: 2.6rem;
+    font-size: 14px;
+    line-height: 26px;
+
     color: $color-white;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    flex-wrap: wrap;
     gap: 2.4rem;
+    @include respond(phone) {
+      row-gap: 14px;
+    }
+    @include respond(phone-small) {
+      line-height: 18px;
+      row-gap: 8px;
+    }
   }
 
   &__attenders,
@@ -65,13 +101,19 @@
   }
 
   &__text {
-    line-height: 2.6rem;
+    line-height: 26px;
+    @include respond(phone-small) {
+      line-height: 18px;
+    }
     color: $color-grey--light;
     max-width: 63.8rem;
   }
 
   &__foot {
     margin-top: 1.8rem;
+    @include respond(phone) {
+      margin-top: 16px;
+    }
   }
 
   &__start-date {
@@ -92,6 +134,9 @@
 
   &__pay {
     margin-top: 5.2rem;
+    @include respond(phone-small) {
+      margin-top: 32px;
+    }
     display: flex;
     align-items: center;
     gap: 2.4rem;
