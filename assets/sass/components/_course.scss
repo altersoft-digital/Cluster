@@ -118,7 +118,7 @@
     gap: 6px;
     font-size: 14px;
     @include respond(phone) {
-      gap: 2px;
+      gap: 4px;
     }
 
     .course__middle-dot {

@@ -5,12 +5,25 @@
   flex-direction: column;
   gap: 3.2rem;
   @include respond(tab-port) {
-    margin-top: 32px;
+    margin-top: 16px;
+    gap: 32px;
+  }
+  @include respond(phone-small) {
+    margin-top: 8px;
+    gap: 24px;
   }
   &__edit {
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
     margin-bottom: 5.2rem;
+    @include respond(tablet) {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    @include respond(tablet) {
+      padding-bottom: 32px;
+      margin-bottom: 32px;
+    }
   }
 
   &__head {
@@ -18,7 +31,13 @@
     align-items: center;
     gap: 3rem;
     margin-bottom: 3rem;
-
+    @include respond(tablet) {
+      margin-bottom: -16px;
+    }
+    @include respond(phone-small) {
+      gap: 24px;
+      margin-bottom: 0;
+    }
     &--img-box {
       width: 13rem;
       height: 13rem;
@@ -43,13 +62,19 @@
     justify-content: space-between;
     border-bottom: 1px solid #ececef;
     padding-bottom: 2rem;
+
     &:nth-of-type(3) {
       padding-bottom: 4.2rem;
     }
     &:nth-of-type(4) {
       border: none;
     }
-
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      border: none;
+      padding-bottom: 0 !important;
+    }
     &--input {
       border: 1px solid rgba(6, 22, 47, 0.1);
       border-radius: 6px;
@@ -99,7 +124,7 @@
     }
 
     &--left {
-      max-width: 26.7rem;
+      max-width: 267px;
     }
   }
 
@@ -126,6 +151,9 @@
 
   &__booked {
     display: grid;
+    gap: 2.4rem;
+    padding-bottom: 5.2rem;
+    border-bottom: 1px solid #ececef;
     grid-template-columns: repeat(4, 1fr);
     @include respond(tablet) {
       grid-template-columns: repeat(3, 1fr);
@@ -133,9 +161,11 @@
     @include respond(tab-phone) {
       grid-template-columns: repeat(2, 1fr);
     }
-    gap: 2.4rem;
-    padding-bottom: 5.2rem;
-    border-bottom: 1px solid #ececef;
+    @include respond(phone) {
+      gap: 16px;
+      padding-bottom: 32px;
+    }
+
     .heading-secondary {
       grid-column: 1 / -1;
     }

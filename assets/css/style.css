@@ -636,7 +636,7 @@ body {
     color: rgba(6, 22, 47, 0.6); }
     @media only screen and (max-width: 37.5em) {
       .course__sub-heading {
-        gap: 2px; } }
+        gap: 4px; } }
     .course__sub-heading .course__middle-dot {
       width: 3px;
       height: 3px;
@@ -1698,16 +1698,36 @@ body {
   gap: 3.2rem; }
   @media only screen and (max-width: 56.25em) {
     .profile {
-      margin-top: 32px; } }
+      margin-top: 16px;
+      gap: 32px; } }
+  @media only screen and (max-width: 25em) {
+    .profile {
+      margin-top: 8px;
+      gap: 24px; } }
   .profile__edit {
     padding-bottom: 5.2rem;
     border-bottom: 1px solid #ececef;
     margin-bottom: 5.2rem; }
+    @media only screen and (max-width: 64em) {
+      .profile__edit {
+        padding-bottom: 40px;
+        margin-bottom: 40px; } }
+    @media only screen and (max-width: 64em) {
+      .profile__edit {
+        padding-bottom: 32px;
+        margin-bottom: 32px; } }
   .profile__head {
     display: flex;
     align-items: center;
     gap: 3rem;
     margin-bottom: 3rem; }
+    @media only screen and (max-width: 64em) {
+      .profile__head {
+        margin-bottom: -16px; } }
+    @media only screen and (max-width: 25em) {
+      .profile__head {
+        gap: 24px;
+        margin-bottom: 0; } }
     .profile__head--img-box {
       width: 13rem;
       height: 13rem;
@@ -1732,6 +1752,12 @@ body {
       padding-bottom: 4.2rem; }
     .profile__option:nth-of-type(4) {
       border: none; }
+    @media only screen and (max-width: 37.5em) {
+      .profile__option {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        border: none;
+        padding-bottom: 0 !important; } }
     .profile__option--input {
       border: 1px solid rgba(6, 22, 47, 0.1);
       border-radius: 6px;
@@ -1769,7 +1795,7 @@ body {
         .profile__option--btn.blue:hover {
           border-color: #cf3a40; }
     .profile__option--left {
-      max-width: 26.7rem; }
+      max-width: 267px; }
   .profile__img-box {
     padding: 4px;
     border-radius: 50%;
@@ -1788,16 +1814,20 @@ body {
       border: 1px solid rgba(6, 22, 47, 0.2); }
   .profile__booked {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 2.4rem;
     padding-bottom: 5.2rem;
-    border-bottom: 1px solid #ececef; }
+    border-bottom: 1px solid #ececef;
+    grid-template-columns: repeat(4, 1fr); }
     @media only screen and (max-width: 64em) {
       .profile__booked {
         grid-template-columns: repeat(3, 1fr); } }
     @media only screen and (max-width: 43.75em) {
       .profile__booked {
         grid-template-columns: repeat(2, 1fr); } }
+    @media only screen and (max-width: 37.5em) {
+      .profile__booked {
+        gap: 16px;
+        padding-bottom: 32px; } }
     .profile__booked .heading-secondary {
       grid-column: 1 / -1; }
     .profile__booked .course .course__img-box {
