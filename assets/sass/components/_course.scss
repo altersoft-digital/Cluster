@@ -111,7 +111,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 6px;
-    font-size: 1.4rem;
+    font-size: 14px;
     @include respond(phone) {
       gap: 2px;
     }

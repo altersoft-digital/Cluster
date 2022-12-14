@@ -133,10 +133,14 @@ body {
 
 .heading-tertiary {
   font-family: "Euclid Circular B";
-  font-size: 1.8rem;
+  font-size: 18px;
   font-weight: 600;
   line-height: 23px;
   letter-spacing: -0.02em; }
+  @media only screen and (max-width: 25em) {
+    .heading-tertiary {
+      font-size: 16px;
+      line-height: 120%; } }
 
 .paragraph {
   font-size: 2rem; }
@@ -156,8 +160,8 @@ body {
 
 .sub-heading {
   font-weight: 500;
-  font-size: 1.4rem;
-  line-height: 1.8rem;
+  font-size: 14px;
+  line-height: 18px;
   letter-spacing: -0.02em; }
   .sub-heading--upper {
     text-transform: uppercase; }
@@ -600,7 +604,7 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 6px;
-    font-size: 1.4rem;
+    font-size: 14px;
     line-height: 2rem;
     letter-spacing: -0.02em;
     color: rgba(6, 22, 47, 0.6); }
@@ -2813,10 +2817,26 @@ body {
 
 .checkout {
   margin-top: 7rem;
+  margin-bottom: 4rem;
   display: grid;
   grid-template-columns: 3.11fr 1.59fr;
   align-items: start;
   gap: 7rem; }
+  @media only screen and (max-width: 64em) {
+    .checkout {
+      gap: 3.2rem;
+      margin-top: 24px;
+      margin-bottom: 32px; } }
+  @media only screen and (max-width: 43.75em) {
+    .checkout {
+      grid-template-columns: 1fr; } }
+  @media only screen and (max-width: 37.5em) {
+    .checkout {
+      margin-top: 12px; } }
+  @media only screen and (max-width: 25em) {
+    .checkout {
+      margin-top: 0;
+      margin-bottom: 24px; } }
   .checkout__products {
     display: flex;
     flex-direction: column;
@@ -2828,29 +2848,39 @@ body {
   .checkout .course__img-box {
     flex: 0 1 20.7rem;
     height: 16.2rem; }
+    @media only screen and (max-width: 25em) {
+      .checkout .course__img-box {
+        padding: 24px 0;
+        height: 100%; } }
     .checkout .course__img-box svg {
       width: 7.1rem;
       height: 7.1rem; }
   .checkout__product-right-down {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 5.2rem; }
     .checkout__product-right-down .course__price {
       height: 30px;
       display: flex;
       align-items: center;
       justify-content: center; }
+    @media only screen and (max-width: 37.5em) {
+      .checkout__product-right-down {
+        gap: 24px; } }
   .checkout__price-box, .checkout__product-quantity {
     display: flex;
     flex-direction: column;
     justify-items: center;
     justify-content: space-between;
-    height: 5.7rem; }
+    gap: 8px; }
+    @media only screen and (max-width: 25em) {
+      .checkout__price-box, .checkout__product-quantity {
+        gap: 4px; } }
   .checkout__price {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 12px;
+    line-height: 15px;
     letter-spacing: -0.02em;
     color: rgba(6, 22, 47, 0.6); }
   .checkout__number-box {
@@ -2917,6 +2947,10 @@ body {
     width: 100%;
     padding: 3.2rem;
     border-radius: 12px; }
+    @media only screen and (max-width: 25em) {
+      .checkout__payment--method {
+        gap: 24px;
+        padding: 24px; } }
     .checkout__payment--method img {
       transition: transform 0.3s ease; }
     .checkout__payment--method input[type="radio"]:checked + label::after {

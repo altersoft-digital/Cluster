@@ -1,9 +1,25 @@
 .checkout {
   margin-top: 7rem;
+  margin-bottom: 4rem;
   display: grid;
   grid-template-columns: 3.11fr 1.59fr;
   align-items: start;
   gap: 7rem;
+  @include respond(tablet) {
+    gap: 3.2rem;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  @include respond(tab-phone) {
+    grid-template-columns: 1fr;
+  }
+  @include respond(phone) {
+    margin-top: 12px;
+  }
+  @include respond(phone-small) {
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
 
   &__products {
     display: flex;
@@ -20,6 +36,10 @@
   .course__img-box {
     flex: 0 1 20.7rem;
     height: 16.2rem;
+    @include respond(phone-small) {
+      padding: 24px 0;
+      height: 100%;
+    }
     & svg {
       width: 7.1rem;
       height: 7.1rem;
@@ -28,12 +48,15 @@
 
   &__product-right-down {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     gap: 5.2rem;
 
     .course__price {
       height: 30px;
       @include flexCenter;
+    }
+    @include respond(phone) {
+      gap: 24px;
     }
   }
 
@@ -43,14 +66,17 @@
     flex-direction: column;
     justify-items: center;
     justify-content: space-between;
-    height: 5.7rem;
+    gap: 8px;
+    @include respond(phone-small) {
+      gap: 4px;
+    }
   }
 
   &__price {
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 12px;
+    line-height: 15px;
     letter-spacing: -0.02em;
     color: $color-primary-light-1;
   }
@@ -144,6 +170,10 @@
       gap: 5.2rem;
       width: 100%;
       padding: 3.2rem;
+      @include respond(phone-small) {
+        gap: 24px;
+        padding: 24px;
+      }
       & img {
         transition: transform 0.3s ease;
       }
