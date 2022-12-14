@@ -1,7 +1,9 @@
 .archive {
   margin-bottom: 8rem;
+  @include respond(phone-small) {
+    margin-bottom: 32px;
+  }
   &__hero {
-    padding-left: 28rem;
     background-image: linear-gradient(
         90deg,
         rgba(6, 22, 47, 0.7) 29.56%,
@@ -12,11 +14,24 @@
     background-size: cover;
     background-position: center;
     height: 600px;
-    display: flex;
-    align-items: center;
+
+    .container {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      @include respond(tablet) {
+        align-items: flex-end;
+        padding-bottom: 52px;
+      }
+      @include respond(phone-small) {
+        padding-bottom: 32px;
+      }
+    }
+    @include respond(phone-small) {
+      height: 393px;
+    }
 
     &--text {
-      margin: auto 0;
       max-width: 435px;
 
       .heading-tertiary {
@@ -28,7 +43,8 @@
       display: inline-block;
       text-decoration: none;
       color: $color-white;
-
+      font-size: 16px;
+      line-height: 19px;
       & svg {
         margin-left: 6px;
         transition: all 0.3s;
@@ -47,12 +63,27 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 7.2rem;
+    @include respond(tablet) {
+      column-gap: 3.2rem;
+      margin-top: 4rem;
+    }
+    @include respond(tab-phone) {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+    @include respond(phone-small) {
+      margin-top: 24px;
+      gap: 24px;
+    }
   }
 
   &__post {
     // cursor: pointer;
     &:nth-child(even) {
       margin-top: 5.2rem;
+      @include respond(tab-phone) {
+        margin-top: 0;
+      }
     }
 
     &--img {
@@ -74,6 +105,10 @@
       font-size: 18px;
       line-height: 22px;
       color: #3970ce;
+      @include respond(phone-small) {
+        font-size: 16px;
+        line-height: 19px;
+      }
       & svg {
         margin-left: 6px;
         transition: all 0.4s;
@@ -103,5 +138,11 @@
     margin-top: 7rem;
     grid-column: 1 / -1;
     justify-self: center;
+    @include respond(tab-phone) {
+      margin-top: 30px;
+    }
+    @include respond(phone-small) {
+      margin-top: 12px;
+    }
   }
 }
