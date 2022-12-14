@@ -267,12 +267,15 @@ body {
 
 .u-margin-bottom-medium-1 {
   margin-bottom: 3.2rem !important; }
+  @media only screen and (max-width: 64em) {
+    .u-margin-bottom-medium-1 {
+      margin-bottom: 16px !important; } }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 64em) {
     .u-margin-bottom-medium {
-      margin-bottom: 3.2rem !important; } }
+      margin-bottom: 32px !important; } }
   @media only screen and (max-width: 25em) {
     .u-margin-bottom-medium {
       margin-bottom: 24px !important; } }
@@ -288,6 +291,12 @@ body {
 
 .u-margin-top-big {
   margin-top: 5.2rem !important; }
+  @media only screen and (max-width: 64em) {
+    .u-margin-top-big {
+      margin-top: 32px !important; } }
+  @media only screen and (max-width: 25em) {
+    .u-margin-top-big {
+      margin-top: 24px !important; } }
 
 .u-margin-top-huge {
   margin-top: 7rem !important; }
@@ -1283,7 +1292,8 @@ body {
   .guide__duration span {
     background-color: rgba(6, 22, 47, 0.6);
     width: 4px;
-    height: 4px; }
+    height: 4px;
+    border-radius: 50%; }
 
 .guide__days {
   margin-top: 16px;
@@ -2678,12 +2688,30 @@ body {
 
 .registered {
   margin-top: 7rem; }
+  @media only screen and (max-width: 75em) {
+    .registered {
+      margin-top: 4rem;
+      gap: 32px; } }
+  @media only screen and (max-width: 64em) {
+    .registered {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 32px; } }
+  @media only screen and (max-width: 37.5em) {
+    .registered {
+      margin-top: 24px; } }
+  @media only screen and (max-width: 25em) {
+    .registered {
+      margin-top: 12px; } }
   .registered__product {
     text-decoration: none;
     color: inherit;
     display: flex;
     align-items: center;
     gap: 3.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .registered__product {
+        margin-top: 16px; } }
     .registered__product .course__img-box {
       width: 100%;
       max-width: 16rem;
@@ -2693,10 +2721,17 @@ body {
       width: 5.4rem; }
   .registered .heading-tertiary {
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 24px;
     line-height: 3rem; }
+    @media only screen and (max-width: 25em) {
+      .registered .heading-tertiary {
+        font-size: 18px;
+        line-height: 23px; } }
   .registered__questionarie {
     margin-top: 4rem; }
+    @media only screen and (max-width: 64em) {
+      .registered__questionarie {
+        margin-top: 32px; } }
     .registered__questionarie--p {
       color: rgba(6, 22, 47, 0.6); }
     .registered__questionarie--take {
@@ -2705,13 +2740,24 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.4rem;
+      flex-wrap: wrap;
+      gap: 16px;
       border: 1px solid rgba(6, 22, 47, 0.1);
       border-radius: 12px; }
+      @media only screen and (max-width: 37.5em) {
+        .registered__questionarie--take {
+          justify-content: center; } }
+      @media only screen and (max-width: 25em) {
+        .registered__questionarie--take {
+          justify-content: center;
+          padding: 24px 16px; } }
   .registered__shared--contents {
     display: flex;
     flex-direction: column;
     gap: 1.6rem; }
+    @media only screen and (max-width: 25em) {
+      .registered__shared--contents {
+        gap: 8px; } }
   .registered__shared--content {
     display: flex;
     align-items: center;
@@ -2721,18 +2767,34 @@ body {
     width: 100%;
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 12px; }
+    @media only screen and (max-width: 37.5em) {
+      .registered__shared--content {
+        padding-left: 24spx; } }
+    @media only screen and (max-width: 25em) {
+      .registered__shared--content {
+        padding: 4px;
+        padding-left: 16px; } }
   .registered__shared--left, .registered__shared--right {
     display: flex;
     align-items: center;
     gap: 1.6rem; }
   .registered__shared--left {
     gap: 2.4rem; }
+    @media only screen and (max-width: 25em) {
+      .registered__shared--left {
+        gap: 16px; }
+        .registered__shared--left svg {
+          width: 20px;
+          height: 20px; } }
   .registered__shared--size, .registered__shared--h4 {
     font-weight: 500; }
   .registered__shared--size {
     color: rgba(6, 22, 47, 0.6); }
   .registered__shared .btn__download {
     box-shadow: none; }
+    @media only screen and (max-width: 25em) {
+      .registered__shared .btn__download {
+        padding: 12px; } }
     .registered__shared .btn__download img {
       transition: all 0.4s; }
     .registered__shared .btn__download:hover {
@@ -2744,26 +2806,46 @@ body {
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 12px;
     align-self: start; }
+    @media only screen and (max-width: 25em) {
+      .registered__right {
+        padding: 16px; } }
   .registered__users {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 1.6rem; }
+    @media only screen and (max-width: 25em) {
+      .registered__users {
+        gap: 12px; } }
   .registered__user {
     display: flex;
     align-items: center;
     gap: 2.4rem;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid rgba(6, 22, 47, 0.1); }
+    @media only screen and (max-width: 25em) {
+      .registered__user {
+        gap: 16px;
+        padding-bottom: 12px; } }
     .registered__user--name {
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px; }
   .registered__share--p {
     margin: 1.6rem 0;
-    color: rgba(6, 22, 47, 0.6); }
+    color: rgba(6, 22, 47, 0.6);
+    font-size: 16px;
+    line-height: 20px; }
+    @media only screen and (max-width: 25em) {
+      .registered__share--p {
+        margin: 24px 0 16px 0; } }
   .registered__share--socials {
     display: flex;
     align-items: center;
     gap: 2.4rem; }
+    @media only screen and (max-width: 25em) {
+      .registered__share--socials {
+        margin-bottom: 40px; } }
     .registered__share--socials img {
       cursor: pointer;
       transition: all 0.3s; }

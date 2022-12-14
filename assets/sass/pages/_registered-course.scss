@@ -1,13 +1,29 @@
 .registered {
   margin-top: 7rem;
-
+  @include respond(tab-land) {
+    margin-top: 4rem;
+    gap: 32px;
+  }
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin-top: 32px;
+  }
+  @include respond(phone) {
+    margin-top: 24px;
+  }
+  @include respond(phone-small) {
+    margin-top: 12px;
+  }
   &__product {
     text-decoration: none;
     color: inherit;
     display: flex;
     align-items: center;
     gap: 3.2rem;
-
+    @include respond(phone) {
+      margin-top: 16px;
+    }
     .course__img-box {
       width: 100%;
       max-width: 16rem;
@@ -21,12 +37,19 @@
   }
   .heading-tertiary {
     font-weight: 600;
-    font-size: 2.4rem;
+    font-size: 24px;
     line-height: 3rem;
+    @include respond(phone-small) {
+      font-size: 18px;
+      line-height: 23px;
+    }
   }
 
   &__questionarie {
     margin-top: 4rem;
+    @include respond(tablet) {
+      margin-top: 32px;
+    }
     &--p {
       color: $color-primary-light-1;
     }
@@ -37,9 +60,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.4rem;
+
+      flex-wrap: wrap;
+
+      gap: 16px;
       border: 1px solid $color-primary-light-3;
       border-radius: 12px;
+      @include respond(phone) {
+        justify-content: center;
+      }
+      @include respond(phone-small) {
+        justify-content: center;
+        padding: 24px 16px;
+      }
     }
   }
 
@@ -48,6 +81,9 @@
       display: flex;
       flex-direction: column;
       gap: 1.6rem;
+      @include respond(phone-small) {
+        gap: 8px;
+      }
     }
 
     &--content {
@@ -59,6 +95,13 @@
       width: 100%;
       border: 1px solid $color-primary-light-3;
       border-radius: 12px;
+      @include respond(phone) {
+        padding-left: 24spx;
+      }
+      @include respond(phone-small) {
+        padding: 4px;
+        padding-left: 16px;
+      }
     }
 
     &--left,
@@ -70,6 +113,13 @@
 
     &--left {
       gap: 2.4rem;
+      @include respond(phone-small) {
+        gap: 16px;
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
 
     &--size,
@@ -83,6 +133,9 @@
 
     .btn__download {
       box-shadow: none;
+      @include respond(phone-small) {
+        padding: 12px;
+      }
       img {
         transition: all 0.4s;
       }
@@ -100,6 +153,9 @@
     border: 1px solid $color-primary-light-3;
     border-radius: 12px;
     align-self: start;
+    @include respond(phone-small) {
+      padding: 16px;
+    }
   }
 
   &__users {
@@ -107,6 +163,9 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+    @include respond(phone-small) {
+      gap: 12px;
+    }
   }
 
   &__user {
@@ -115,9 +174,14 @@
     gap: 2.4rem;
     padding-bottom: 1.6rem;
     border-bottom: 1px solid $color-primary-light-3;
-
+    @include respond(phone-small) {
+      gap: 16px;
+      padding-bottom: 12px;
+    }
     &--name {
       font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
     }
   }
 
@@ -125,12 +189,20 @@
     &--p {
       margin: 1.6rem 0;
       color: $color-primary-light-1;
+      font-size: 16px;
+      line-height: 20px;
+      @include respond(phone-small) {
+        margin: 24px 0 16px 0;
+      }
     }
 
     &--socials {
       display: flex;
       align-items: center;
       gap: 2.4rem;
+      @include respond(phone-small) {
+        margin-bottom: 40px;
+      }
       & img {
         cursor: pointer;
         transition: all 0.3s;

@@ -122,12 +122,15 @@
 
 .u-margin-bottom-medium-1 {
   margin-bottom: 3.2rem !important;
+  @include respond(tablet) {
+    margin-bottom: 16px !important;
+  }
 }
 
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
-  @include respond(tab-port) {
-    margin-bottom: 3.2rem !important;
+  @include respond(tablet) {
+    margin-bottom: 32px !important;
   }
   @include respond(phone-small) {
     margin-bottom: 24px !important;
@@ -146,6 +149,12 @@
 
 .u-margin-top-big {
   margin-top: 5.2rem !important;
+  @include respond(tablet) {
+    margin-top: 32px !important;
+  }
+  @include respond(phone-small) {
+    margin-top: 24px !important;
+  }
 }
 
 .u-margin-top-huge {
