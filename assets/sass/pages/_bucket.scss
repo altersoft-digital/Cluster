@@ -1,6 +1,21 @@
 .bucket {
   margin-top: 7rem;
-
+  @include respond(tab-land) {
+    margin-top: 4rem;
+    gap: 32px;
+  }
+  @include respond(tablet) {
+    margin-top: 32px;
+  }
+  @include respond(tab-phone) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 24px;
+  }
+  @include respond(phone-small) {
+    gap: 24px;
+    margin-top: 6px;
+  }
   &__left {
     width: 100%;
   }
@@ -9,14 +24,26 @@
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    @include respond(phone-small) {
+      gap: 16px;
+    }
   }
 
   &__product {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.2rem;
     .checkout__product {
       flex: 2;
+    }
+    @include respond(phone-small) {
+      flex-direction: column;
+      align-items: unset;
+
+      & .btn {
+        justify-content: center;
+      }
     }
 
     .btn__white {
@@ -69,6 +96,9 @@
   .btn__blue {
     margin-top: 1.6rem;
     align-self: flex-end;
+    @include respond(phone-small) {
+      margin-top: 8px;
+    }
   }
 
   &__right {

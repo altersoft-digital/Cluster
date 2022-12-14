@@ -117,10 +117,11 @@
     }
 
     .course__middle-dot {
-      font-size: 20px;
-      position: relative;
+      width: 3px;
+      height: 3px;
       display: flex;
-      line-height: 0;
+      background: rgba(6, 22, 47, 0.6);
+      border-radius: 50%;
     }
     line-height: 2rem;
     letter-spacing: -0.02em;

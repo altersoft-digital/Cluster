@@ -624,10 +624,11 @@ body {
       .course__sub-heading {
         gap: 2px; } }
     .course__sub-heading .course__middle-dot {
-      font-size: 20px;
-      position: relative;
+      width: 3px;
+      height: 3px;
       display: flex;
-      line-height: 0; }
+      background: rgba(6, 22, 47, 0.6);
+      border-radius: 50%; }
   .course__remote {
     color: #14dc94; }
   .course__price {
@@ -2854,18 +2855,44 @@ body {
 
 .bucket {
   margin-top: 7rem; }
+  @media only screen and (max-width: 75em) {
+    .bucket {
+      margin-top: 4rem;
+      gap: 32px; } }
+  @media only screen and (max-width: 64em) {
+    .bucket {
+      margin-top: 32px; } }
+  @media only screen and (max-width: 43.75em) {
+    .bucket {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 24px; } }
+  @media only screen and (max-width: 25em) {
+    .bucket {
+      gap: 24px;
+      margin-top: 6px; } }
   .bucket__left {
     width: 100%; }
   .bucket__products {
     display: flex;
     flex-direction: column;
     gap: 2.4rem; }
+    @media only screen and (max-width: 25em) {
+      .bucket__products {
+        gap: 16px; } }
   .bucket__product {
     display: flex;
     align-items: center;
-    justify-content: space-between; }
+    justify-content: space-between;
+    gap: 1.2rem; }
     .bucket__product .checkout__product {
       flex: 2; }
+    @media only screen and (max-width: 25em) {
+      .bucket__product {
+        flex-direction: column;
+        align-items: unset; }
+        .bucket__product .btn {
+          justify-content: center; } }
     .bucket__product .btn__white svg {
       transition: all 0.4s; }
     .bucket__product .btn__white:hover, .bucket__product .btn__white:active {
@@ -2893,6 +2920,9 @@ body {
   .bucket .btn__blue {
     margin-top: 1.6rem;
     align-self: flex-end; }
+    @media only screen and (max-width: 25em) {
+      .bucket .btn__blue {
+        margin-top: 8px; } }
   .bucket__right {
     border: 1px solid rgba(6, 22, 47, 0.1);
     border-radius: 12px;
