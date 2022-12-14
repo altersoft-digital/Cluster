@@ -159,6 +159,18 @@
 
 .u-margin-top-huge {
   margin-top: 7rem !important;
+  @include respond(tab-land) {
+    margin-top: 4rem !important;
+  }
+  @include respond(tablet) {
+    margin-top: 32px !important;
+  }
+  @include respond(tab-phone) {
+    margin-top: 24px !important;
+  }
+  @include respond(phone-small) {
+    margin-top: 6px !important;
+  }
 }
 
 .road {
